@@ -1,0 +1,37 @@
+﻿@{
+    ViewData["Title"] = "Dashboard";
+    var user = ViewBag.User as CavendishACMISPortal.Models.User;
+}
+<div class="max-w-7xl mx-auto">
+    <h1 class="text-4xl font-semibold text-[#121e38]">Good morning, <span class="text-[#4E93CC]">@user?.FullName</span> 👋</h1>
+    <p class="text-gray-600 mt-1">Welcome to Cavendish ACMIS Portal</p>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+        <div class="glass rounded-3xl p-6 shadow-xl">
+            <p class="text-sm text-gray-500">Account Balance</p>
+            <p class="text-5xl font-semibold text-[#121e38] mt-2">@user?.AccountBalance.ToString("N0")/=</p>
+            <span class="inline-block mt-3 px-4 py-1 bg-green-100 text-green-700 text-sm rounded-2xl">Normal Progress</span>
+        </div>
+        <div class="glass rounded-3xl p-6 shadow-xl">
+            <p class="text-sm text-gray-500">Current Semester</p>
+            <p class="text-4xl font-semibold text-[#121e38] mt-2">Semester II • 2025/2026</p>
+        </div>
+        <div class="glass rounded-3xl p-6 shadow-xl flex flex-col justify-between">
+            <div>
+                <p class="text-sm text-gray-500">Graduation Invitation Ready</p>
+                <p class="font-medium text-[#121e38]">INV-VIP-26-622096-NAC</p>
+            </div>
+            <a href="#" class="bg-green-600 text-white px-8 py-4 rounded-3xl inline-flex items-center gap-2 hover:bg-green-700 transition">Download Invitation</a>
+        </div>
+    </div>
+
+    <div class="mt-12">
+        <h2 class="text-2xl font-semibold mb-4">Quick Actions</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <a asp-action="GeneratePRN" class="block p-6 bg-white rounded-3xl shadow hover:shadow-xl transition text-center">Generate PRN</a>
+            <a asp-action="Enrolment" class="block p-6 bg-white rounded-3xl shadow hover:shadow-xl transition text-center">Enrol / Register Modules</a>
+            <a asp-action="Results" class="block p-6 bg-white rounded-3xl shadow hover:shadow-xl transition text-center">View Results</a>
+            <a asp-action="BioData" class="block p-6 bg-white rounded-3xl shadow hover:shadow-xl transition text-center">Update Profile</a>
+        </div>
+    </div>
+</div>

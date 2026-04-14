@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Manage Modules";
+    var modules = Model as List<CavendishACMISPortal.Models.Module>;
+}
+<div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl font-semibold mb-6">All Modules</h2>
+    <table class="w-full glass rounded-3xl overflow-hidden">
+        <thead class="bg-[#121e38] text-white">
+            <tr><th class="px-8 py-4 text-left">Module Code</th><th class="px-8 py-4 text-left">Module Name</th><th class="px-8 py-4 text-left">Credits</th><th class="px-8 py-4 text-left">Course</th><th>Actions</th></tr>
+        </thead>
+        <tbody>
+            @foreach (var m in modules ?? new List<CavendishACMISPortal.Models.Module>())
+            {
+                <tr class="border-t">
+                    <td class="px-8 py-4">@m.ModuleCode</td>
+                    <td class="px-8 py-4">@m.ModuleName</td>
+                    <td class="px-8 py-4">@m.Credits</td>
+                    <td class="px-8 py-4">@m.Course?.CourseName</td>
+                    <td class="px-8 py-4"><span class="text-[#4E93CC] hover:underline cursor-pointer">Edit</span></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

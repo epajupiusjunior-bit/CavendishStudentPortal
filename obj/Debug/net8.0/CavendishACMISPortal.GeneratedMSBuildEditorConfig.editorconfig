@@ -1,0 +1,135 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.TargetFrameworkIdentifier = .NETCoreApp
+build_property.TargetFrameworkVersion = v8.0
+build_property.RootNamespace = CavendishACMISPortal
+build_property.RootNamespace = CavendishACMISPortal
+build_property.ProjectDir = C:\Users\EPAJU PIUS JUNIOR\Documents\YEAR 2 SEM 1\ASP.NET&C#\VSCom1\Web App\CavendishACMISPortal\CavendishACMISPortal\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\EPAJU PIUS JUNIOR\Documents\YEAR 2 SEM 1\ASP.NET&C#\VSCom1\Web App\CavendishACMISPortal\CavendishACMISPortal
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 8.0
+build_property.EnableCodeStyleSeverity = 
+
+[C:/Users/EPAJU PIUS JUNIOR/Documents/YEAR 2 SEM 1/ASP.NET&C\#/VSCom1/Web App/CavendishACMISPortal/CavendishACMISPortal/Views/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/EPAJU PIUS JUNIOR/Documents/YEAR 2 SEM 1/ASP.NET&C\#/VSCom1/Web App/CavendishACMISPortal/CavendishACMISPortal/Views/Admin/AddCourse.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRkQ291cnNlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/EPAJU PIUS JUNIOR/Documents/YEAR 2 SEM 1/ASP.NET&C\#/VSCom1/Web App/CavendishACMISPortal/CavendishACMISPortal/Views/Admin/AddModule.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRkTW9kdWxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/EPAJU PIUS JUNIOR/Documents/YEAR 2 SEM 1/ASP.NET&C\#/VSCom1/Web App/CavendishACMISPortal/CavendishACMISPortal/Views/Admin/AddStudent.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRkU3R1ZGVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/EPAJU PIUS JUNIOR/Documents/YEAR 2 SEM 1/ASP.NET&C\#/VSCom1/Web App/CavendishACMISPortal/CavendishACMISPortal/Views/Admin/Courses.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ291cnNlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/EPAJU PIUS JUNIOR/Documents/YEAR 2 SEM 1/ASP.NET&C\#/VSCom1/Web App/CavendishACMISPortal/CavendishACMISPortal/Views/Admin/Dashboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRGFzaGJvYXJkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/EPAJU PIUS JUNIOR/Documents/YEAR 2 SEM 1/ASP.NET&C\#/VSCom1/Web App/CavendishACMISPortal/CavendishACMISPortal/Views/Admin/EditCourse.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdENvdXJzZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/EPAJU PIUS JUNIOR/Documents/YEAR 2 SEM 1/ASP.NET&C\#/VSCom1/Web App/CavendishACMISPortal/CavendishACMISPortal/Views/Admin/EditFees.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdEZlZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/EPAJU PIUS JUNIOR/Documents/YEAR 2 SEM 1/ASP.NET&C\#/VSCom1/Web App/CavendishACMISPortal/CavendishACMISPortal/Views/Admin/EditModule.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdE1vZHVsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/EPAJU PIUS JUNIOR/Documents/YEAR 2 SEM 1/ASP.NET&C\#/VSCom1/Web App/CavendishACMISPortal/CavendishACMISPortal/Views/Admin/EditStudent.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdFN0dWRlbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/EPAJU PIUS JUNIOR/Documents/YEAR 2 SEM 1/ASP.NET&C\#/VSCom1/Web App/CavendishACMISPortal/CavendishACMISPortal/Views/Admin/EnterResult.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRW50ZXJSZXN1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/EPAJU PIUS JUNIOR/Documents/YEAR 2 SEM 1/ASP.NET&C\#/VSCom1/Web App/CavendishACMISPortal/CavendishACMISPortal/Views/Admin/Modules.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTW9kdWxlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/EPAJU PIUS JUNIOR/Documents/YEAR 2 SEM 1/ASP.NET&C\#/VSCom1/Web App/CavendishACMISPortal/CavendishACMISPortal/Views/Admin/Results.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUmVzdWx0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/EPAJU PIUS JUNIOR/Documents/YEAR 2 SEM 1/ASP.NET&C\#/VSCom1/Web App/CavendishACMISPortal/CavendishACMISPortal/Views/Admin/Students.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cU3R1ZGVudHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/EPAJU PIUS JUNIOR/Documents/YEAR 2 SEM 1/ASP.NET&C\#/VSCom1/Web App/CavendishACMISPortal/CavendishACMISPortal/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/EPAJU PIUS JUNIOR/Documents/YEAR 2 SEM 1/ASP.NET&C\#/VSCom1/Web App/CavendishACMISPortal/CavendishACMISPortal/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/EPAJU PIUS JUNIOR/Documents/YEAR 2 SEM 1/ASP.NET&C\#/VSCom1/Web App/CavendishACMISPortal/CavendishACMISPortal/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/EPAJU PIUS JUNIOR/Documents/YEAR 2 SEM 1/ASP.NET&C\#/VSCom1/Web App/CavendishACMISPortal/CavendishACMISPortal/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/EPAJU PIUS JUNIOR/Documents/YEAR 2 SEM 1/ASP.NET&C\#/VSCom1/Web App/CavendishACMISPortal/CavendishACMISPortal/Views/Student/BioData.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxCaW9EYXRhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/EPAJU PIUS JUNIOR/Documents/YEAR 2 SEM 1/ASP.NET&C\#/VSCom1/Web App/CavendishACMISPortal/CavendishACMISPortal/Views/Student/Dashboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxEYXNoYm9hcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/EPAJU PIUS JUNIOR/Documents/YEAR 2 SEM 1/ASP.NET&C\#/VSCom1/Web App/CavendishACMISPortal/CavendishACMISPortal/Views/Student/Enrolment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxFbnJvbG1lbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/EPAJU PIUS JUNIOR/Documents/YEAR 2 SEM 1/ASP.NET&C\#/VSCom1/Web App/CavendishACMISPortal/CavendishACMISPortal/Views/Student/GeneratedPRN.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxHZW5lcmF0ZWRQUk4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/EPAJU PIUS JUNIOR/Documents/YEAR 2 SEM 1/ASP.NET&C\#/VSCom1/Web App/CavendishACMISPortal/CavendishACMISPortal/Views/Student/Results.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxSZXN1bHRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/EPAJU PIUS JUNIOR/Documents/YEAR 2 SEM 1/ASP.NET&C\#/VSCom1/Web App/CavendishACMISPortal/CavendishACMISPortal/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/EPAJU PIUS JUNIOR/Documents/YEAR 2 SEM 1/ASP.NET&C\#/VSCom1/Web App/CavendishACMISPortal/CavendishACMISPortal/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/EPAJU PIUS JUNIOR/Documents/YEAR 2 SEM 1/ASP.NET&C\#/VSCom1/Web App/CavendishACMISPortal/CavendishACMISPortal/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-l4n7rsr3w2

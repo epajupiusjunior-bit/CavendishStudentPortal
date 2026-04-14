@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Manage Results";
+    var results = Model as List<CavendishACMISPortal.Models.Result>;
+}
+<div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl font-semibold mb-6">All Student Results</h2>
+    <table class="w-full glass rounded-3xl overflow-hidden">
+        <thead class="bg-[#121e38] text-white">
+            <tr><th class="px-8 py-4 text-left">Student</th><th class="px-8 py-4 text-left">Module</th><th class="px-8 py-4 text-left">Score</th><th class="px-8 py-4 text-left">Grade</th><th>Actions</th></tr>
+        </thead>
+        <tbody>
+            @foreach (var r in results ?? new List<CavendishACMISPortal.Models.Result>())
+            {
+                <tr class="border-t">
+                    <td class="px-8 py-4">@r.User?.FullName</td>
+                    <td class="px-8 py-4">@r.Module?.ModuleName</td>
+                    <td class="px-8 py-4">@r.Score</td>
+                    <td class="px-8 py-4">@r.Grade</td>
+                    <td class="px-8 py-4"><span class="text-[#4E93CC] hover:underline cursor-pointer">Edit Score</span></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

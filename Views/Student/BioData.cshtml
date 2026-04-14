@@ -1,0 +1,39 @@
+﻿@{
+    ViewData["Title"] = "Bio Data";
+    var user = ViewBag.User as CavendishACMISPortal.Models.User;
+}
+<div class="max-w-4xl mx-auto">
+    <h2 class="text-3xl font-semibold mb-8">👤 My Bio Data</h2>
+
+    <div class="glass rounded-3xl p-8">
+        <form asp-action="UpdateProfile" method="post">
+            <div class="grid grid-cols-2 gap-8">
+                <div>
+                    <label class="block text-sm font-medium mb-2">Full Name</label>
+                    <input value="@user?.FullName" class="w-full px-5 py-4 rounded-2xl border" readonly />
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-2">Student Number</label>
+                    <input value="@user?.Username" class="w-full px-5 py-4 rounded-2xl border" readonly />
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-2">Programme</label>
+                    <input value="@user?.Programme" class="w-full px-5 py-4 rounded-2xl border" readonly />
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-2">District</label>
+                    <input value="@user?.District" class="w-full px-5 py-4 rounded-2xl border" readonly />
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-2">Phone Number <span class="text-green-600">(editable)</span></label>
+                    <input name="phone" value="@user?.Phone" class="w-full px-5 py-4 rounded-2xl border focus:border-[#4E93CC]" required />
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-2">Email <span class="text-green-600">(editable)</span></label>
+                    <input name="email" value="@user?.Email" class="w-full px-5 py-4 rounded-2xl border focus:border-[#4E93CC]" required />
+                </div>
+            </div>
+            <button type="submit" class="mt-10 bg-green-600 text-white px-10 py-4 rounded-3xl font-semibold hover:bg-green-700">Save Changes</button>
+        </form>
+    </div>
+</div>

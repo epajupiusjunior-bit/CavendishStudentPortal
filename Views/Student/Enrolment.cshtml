@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "Enrolment";
+    var modules = ViewBag.Modules as List<CavendishACMISPortal.Models.Module>;
+}
+<div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl font-semibold mb-6">Enrol / Register Modules</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        @foreach (var m in modules ?? new List<CavendishACMISPortal.Models.Module>())
+        {
+            <div class="glass rounded-3xl p-6">
+                <h4 class="font-semibold">@m.ModuleCode - @m.ModuleName</h4>
+                <p class="text-sm text-gray-500">@m.Credits Credits</p>
+                <form asp-action="RegisterModule" method="post" class="mt-4">
+                    <input type="hidden" name="moduleId" value="@m.Id" />
+                    <button type="submit" class="bg-green-600 text-white px-8 py-3 rounded-3xl">Register for this Module</button>
+                </form>
+            </div>
+        }
+    </div>
+</div>

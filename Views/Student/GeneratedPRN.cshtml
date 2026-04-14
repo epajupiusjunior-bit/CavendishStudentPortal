@@ -1,0 +1,44 @@
+﻿@{
+    ViewData["Title"] = "Generate PRN";
+    var user = ViewBag.User as CavendishACMISPortal.Models.User;
+    var prns = ViewBag.PRNs as List<CavendishACMISPortal.Models.GeneratedPRN>;
+}
+<div class="max-w-5xl mx-auto">
+    <h2 class="text-3xl font-semibold mb-6">Generate PRN</h2>
+
+    <div class="glass rounded-3xl p-8 mb-8">
+        <form asp-action="GenerateNewPRN" method="post" class="flex gap-6">
+            <div class="flex-1">
+                <label>Amount to Deposit (UGX)</label>
+                <input name="amount" type="number" class="w-full px-5 py-4 rounded-2xl border" value="50000" required />
+            </div>
+            <div class="flex-1">
+                <label>Purpose</label>
+                <select name="purpose" class="w-full px-5 py-4 rounded-2xl border">
+                    <option>Tuition Fees</option>
+                    <option>Functional Fees</option>
+                    <option>Other</option>
+                </select>
+            </div>
+            <button type="submit" class="mt-8 bg-green-600 text-white px-12 py-4 rounded-3xl font-semibold">Generate PRN</button>
+        </form>
+    </div>
+
+    <h3 class="text-xl font-medium mb-4">My Generated PRNs</h3>
+    <table class="w-full glass rounded-3xl overflow-hidden">
+        <thead class="bg-[#121e38] text-white">
+            <tr><th class="px-8 py-4 text-left">PRN Number</th><th class="px-8 py-4 text-left">Amount</th><th class="px-8 py-4 text-left">Purpose</th><th class="px-8 py-4 text-left">Date</th></tr>
+        </thead>
+        <tbody>
+            @foreach (var p in prns ?? new List<CavendishACMISPortal.Models.GeneratedPRN>())
+            {
+                <tr class="border-t">
+                    <td class="px-8 py-4">@p.PRNNumber</td>
+                    <td class="px-8 py-4">@p.Amount.ToString("N0")</td>
+                    <td class="px-8 py-4">@p.Purpose</td>
+                    <td class="px-8 py-4">@p.GeneratedDate.ToString("dd MMM yyyy")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

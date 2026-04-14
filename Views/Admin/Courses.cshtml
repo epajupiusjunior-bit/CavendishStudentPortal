@@ -1,0 +1,28 @@
+﻿@{
+    ViewData["Title"] = "Manage Courses";
+    var courses = Model as List<CavendishACMISPortal.Models.Course>;
+}
+<div class="max-w-6xl mx-auto">
+    <div class="flex justify-between items-center mb-6">
+        <h2 class="text-3xl font-semibold">All Courses</h2>
+        <button onclick="alert('Course creation form coming soon – reply if you need it now')"
+                class="bg-green-600 text-white px-8 py-4 rounded-3xl">
+            + Add New Course
+        </button>
+    </div>
+    <table class="w-full glass rounded-3xl overflow-hidden">
+        <thead class="bg-[#121e38] text-white">
+            <tr><th class="px-8 py-4 text-left">Course Code</th><th class="px-8 py-4 text-left">Course Name</th><th class="px-8 py-4 text-left">Actions</th></tr>
+        </thead>
+        <tbody>
+            @foreach (var c in courses ?? new List<CavendishACMISPortal.Models.Course>())
+            {
+                <tr class="border-t">
+                    <td class="px-8 py-4">@c.CourseCode</td>
+                    <td class="px-8 py-4">@c.CourseName</td>
+                    <td class="px-8 py-4"><span class="text-[#4E93CC] hover:underline cursor-pointer">Edit</span></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,55 @@
+﻿@{
+    ViewData["Title"] = "Manage Students";
+    var students = Model as List<CavendishACMISPortal.Models.User>;
+}
+<div class="max-w-7xl mx-auto">
+    <div class="flex justify-between items-center mb-6">
+        <h2 class="text-3xl font-semibold">All Students</h2>
+        <a asp-action="AddStudent" class="bg-green-600 text-white px-8 py-4 rounded-3xl flex items-center gap-2 hover:bg-green-700">
+            + Add New Student
+        </a>
+    </div>
+
+    <div class="glass rounded-3xl overflow-hidden">
+        <table class="w-full">
+            <thead class="bg-[#121e38] text-white">
+                <tr>
+                    <th class="px-8 py-4 text-left">Photo</th>
+                    <th class="px-8 py-4 text-left">Name</th>
+                    <th class="px-8 py-4 text-left">Student No</th>
+                    <th class="px-8 py-4 text-left">Programme</th>
+                    <th class="px-8 py-4 text-left">Balance</th>
+                    <th class="px-8 py-4 text-left">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var s in students ?? new List<CavendishACMISPortal.Models.User>())
+                {
+                    <tr class="border-t hover:bg-gray-50">
+                        <td class="px-8 py-4">
+                            @if (!string.IsNullOrEmpty(s.ProfilePicture))
+                            {
+                                <img src="/images/profiles/@s.ProfilePicture"
+                                     class="w-10 h-10 rounded-full object-cover border-2 border-[#4E93CC]"
+                                     alt="Profile" />
+                            }
+                            else
+                            {
+                                <div class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-400">
+                                    👤
+                                </div>
+                            }
+                        </td>
+                        <td class="px-8 py-4">@s.FullName</td>
+                        <td class="px-8 py-4">@s.Username</td>
+                        <td class="px-8 py-4">@s.Programme</td>
+                        <td class="px-8 py-4">@s.AccountBalance.ToString("N0") UGX</td>
+                        <td class="px-8 py-4">
+                            <a asp-action="EditStudent" asp-route-id="@s.Id" class="text-[#4E93CC] hover:underline">Edit</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
