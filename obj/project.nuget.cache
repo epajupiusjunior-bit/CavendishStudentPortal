@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fHClt+5+xfA=",
+  "dgSpecHash": "uT7eXB93UrE=",
   "success": true,
-  "projectFilePath": "C:\\Users\\EPAJU PIUS JUNIOR\\Documents\\YEAR 2 SEM 1\\ASP.NET&C#\\VSCom1\\Web App\\CavendishACMISPortal\\CavendishACMISPortal\\CavendishACMISPortal.csproj",
+  "projectFilePath": "C:\\Users\\EPAJU PIUS JUNIOR\\Documents\\YEAR 2 SEM 1\\ASP.NET&C#\\Individual Project\\CavendishStudentPortal\\CavendishACMISPortal.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\EPAJU PIUS JUNIOR\\.nuget\\packages\\closedxml\\0.105.0\\closedxml.0.105.0.nupkg.sha512",
     "C:\\Users\\EPAJU PIUS JUNIOR\\.nuget\\packages\\closedxml.parser\\2.0.0\\closedxml.parser.2.0.0.nupkg.sha512",

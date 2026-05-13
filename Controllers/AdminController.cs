@@ -11,6 +11,7 @@ namespace CavendishACMISPortal.Controllers
     public class AdminController : Controller
     {
         private readonly AppDbContext _context;
+
         public AdminController(AppDbContext context) => _context = context;
 
         public IActionResult Dashboard()
@@ -24,24 +25,89 @@ namespace CavendishACMISPortal.Controllers
                 .OrderByDescending(s => s.AvgScore)
                 .Take(5)
                 .ToList();
+
             ViewBag.Defaulters = _context.Users
                 .Where(u => u.Role == "Student" && u.AccountBalance > 50000)
                 .OrderByDescending(u => (double)u.AccountBalance)
                 .ToList();
+
             return View();
         }
 
+        // ====================== REQUESTED ACTIONS ======================
+
+        public IActionResult Courses()
+        {
+            var courses = _context.Courses
+                .Include(c => c.Modules)
+                .ToList();
+            return View(courses);
+        }
+
+        public IActionResult Modules()
+        {
+            var modules = _context.Modules
+                .Include(m => m.Course)
+                .ToList();
+            return View(modules);
+        }
+
+        public IActionResult Students()
+        {
+            var students = _context.Users
+                .Where(u => u.Role == "Student")
+                .ToList();
+            return View(students);
+        }
+
+        public IActionResult Results()
+        {
+            var results = _context.Results
+                .Include(r => r.User)
+                .Include(r => r.Module)
+                .ToList();
+            return View(results);
+        }
+
+        // ====================== EXISTING FEATURES (unchanged) ======================
+
         // NEW: Full Module CRUD
         public IActionResult AddModule() => View();
-        [HttpPost] public IActionResult AddModule(Module model) { _context.Modules.Add(model); _context.SaveChanges(); return RedirectToAction("Modules"); }
+        [HttpPost]
+        public IActionResult AddModule(Module model)
+        {
+            _context.Modules.Add(model);
+            _context.SaveChanges();
+            return RedirectToAction("Modules");
+        }
+
         public IActionResult EditModule(int id) => View(_context.Modules.Include(m => m.Course).FirstOrDefault(m => m.Id == id));
-        [HttpPost] public IActionResult EditModule(Module model) { _context.Update(model); _context.SaveChanges(); return RedirectToAction("Modules"); }
+        [HttpPost]
+        public IActionResult EditModule(Module model)
+        {
+            _context.Update(model);
+            _context.SaveChanges();
+            return RedirectToAction("Modules");
+        }
 
         // NEW: Course CRUD
         public IActionResult AddCourse() => View();
-        [HttpPost] public IActionResult AddCourse(Course model) { _context.Courses.Add(model); _context.SaveChanges(); return RedirectToAction("Courses"); }
+        [HttpPost]
+        public IActionResult AddCourse(Course model)
+        {
+            _context.Courses.Add(model);
+            _context.SaveChanges();
+            return RedirectToAction("Courses");
+        }
+
         public IActionResult EditCourse(int id) => View(_context.Courses.Find(id));
-        [HttpPost] public IActionResult EditCourse(Course model) { _context.Update(model); _context.SaveChanges(); return RedirectToAction("Courses"); }
+        [HttpPost]
+        public IActionResult EditCourse(Course model)
+        {
+            _context.Update(model);
+            _context.SaveChanges();
+            return RedirectToAction("Courses");
+        }
 
         // NEW: Result Entry Form
         public IActionResult EnterResult() => View(new Result());
@@ -88,10 +154,11 @@ namespace CavendishACMISPortal.Controllers
             workbook.SaveAs(stream);
             return File(stream.ToArray(), "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "Students.xlsx");
         }
+
         [HttpGet]
         public IActionResult AddStudent()
         {
-            ViewBag.Courses = _context.Courses.ToList();   // for programme dropdown
+            ViewBag.Courses = _context.Courses.ToList();
             return View();
         }
 
@@ -110,16 +177,14 @@ namespace CavendishACMISPortal.Controllers
                 using var stream = profilePicture.OpenReadStream();
                 using var image = await SixLabors.ImageSharp.Image.LoadAsync(stream);
 
-                // ✅ Resize: max 300x300 while keeping aspect ratio
-                var resizeOptions = new SixLabors.ImageSharp.Processing.ResizeOptions
+                var resizeOptions = new ResizeOptions
                 {
                     Size = new SixLabors.ImageSharp.Size(300, 300),
-                    Mode = SixLabors.ImageSharp.Processing.ResizeMode.Max
+                    Mode = ResizeMode.Max
                 };
                 image.Mutate(x => x.Resize(resizeOptions));
 
                 await image.SaveAsJpegAsync(filePath);
-
                 student.ProfilePicture = fileName;
             }
 
