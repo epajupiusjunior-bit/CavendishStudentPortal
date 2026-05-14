@@ -1,178 +1,90 @@
 ﻿@{
     ViewData["Title"] = "Admin Dashboard";
+    var bestStudents = ViewBag.BestStudents as List<dynamic> ?? new List<dynamic>();
+    var defaulters = ViewBag.Defaulters as List<CavendishACMISPortal.Models.User> ?? new List<CavendishACMISPortal.Models.User>();
 }
 
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
-
-<style>
-    .dash { font-family: 'Sora', sans-serif; max-width: 1100px; margin: 0 auto; padding: 2rem 1.5rem; }
-    .topbar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 2.5rem; }
-    .topbar h1 { font-size: 1.6rem; font-weight: 600; color: #7b8fa1; letter-spacing: -0.02em; }
-    .topbar-sub { font-size: 0.78rem; color: #7b8fa1; margin-top: 4px; }
-    .date-badge { font-size: 0.78rem; color: #7b8fa1; font-family: 'JetBrains Mono', monospace; background: #e4e8f0; padding: 4px 12px; border-radius: 20px; }
-    .export-btn { background: #0d1b2a; color: #fff; border: none; padding: 10px 20px; border-radius: 12px; font-family: 'Sora', sans-serif; font-size: 0.85rem; font-weight: 500; cursor: pointer; display: flex; align-items: center; gap: 8px; text-decoration: none; }
-    .export-btn:hover { background: #1a2f4a; color: #fff; }
-    .topbar-right { display: flex; align-items: center; gap: 10px; }
-
-    /* Stats */
-    .stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-bottom: 2rem; }
-    .stat { background: #fff; border-radius: 20px; padding: 1.5rem; position: relative; overflow: hidden; }
-    .stat-accent { position: absolute; top: 0; right: 0; width: 60px; height: 60px; border-radius: 0 20px 0 60px; }
-    .stat-label { font-size: 0.72rem; color: #7b8fa1; font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.5rem; }
-    .stat-val { font-size: 2.4rem; font-weight: 600; color: #0d1b2a; letter-spacing: -0.03em; font-family: 'JetBrains Mono', monospace; }
-
-    /* Cards */
-    .grid2 { display: grid; grid-template-columns: 1.4fr 1fr; gap: 1rem; margin-bottom: 1rem; }
-    .card { background: #fff; border-radius: 20px; padding: 1.5rem; }
-    .card-title { font-size: 0.85rem; font-weight: 600; color: #0d1b2a; margin-bottom: 1.25rem; display: flex; justify-content: space-between; align-items: center; }
-    .card-subtitle { font-size: 0.75rem; color: #7b8fa1; font-weight: 400; }
-
-    /* Top Students */
-    .student-row { display: flex; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid #f0f2f7; }
-    .student-row:last-child { border-bottom: none; }
-    .avatar { width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.72rem; font-weight: 600; flex-shrink: 0; }
-    .sname { font-size: 0.85rem; font-weight: 500; color: #7b8fa1; flex: 1; }
-    .score-bar-wrap { width: 80px; height: 6px; background: #f0f2f7; border-radius: 10px; overflow: hidden; margin-right: 8px; }
-    .score-bar { height: 100%; border-radius: 10px; background: linear-gradient(90deg, #3b82f6, #6366f1); }
-    .score-num { font-size: 0.8rem; font-weight: 500; color: #3b82f6; font-family: 'JetBrains Mono', monospace; min-width: 36px; text-align: right; }
-
-    /* Defaulters */
-    .def-row { display: flex; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid #f0f2f7; }
-    .def-row:last-child { border-bottom: none; }
-    .def-name { font-size: 0.85rem; font-weight: 500; color: #7b8fa1; }
-    .def-prog { font-size: 0.75rem; color: #7b8fa1; }
-    .def-bal { font-size: 0.8rem; font-weight: 600; color: #ef4444; font-family: 'JetBrains Mono', monospace; background: #fef2f2; padding: 4px 10px; border-radius: 8px; white-space: nowrap; }
-    .badge-red { background: #fef2f2; color: #ef4444; font-size: 0.72rem; font-weight: 600; padding: 3px 8px; border-radius: 6px; }
-
-    /* Quick Actions */
-    .quick-actions { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1rem; }
-    .qa { background: #fff; border-radius: 16px; padding: 1.25rem; text-align: center; text-decoration: none; border: 1.5px solid transparent; transition: transform 0.15s, border-color 0.15s; display: block; }
-    .qa:hover { transform: translateY(-2px); border-color: #c7d2fe; }
-    .qa-icon { width: 40px; height: 40px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin: 0 auto 10px; font-size: 1.1rem; }
-    .qa-label { font-size: 0.82rem; font-weight: 500; color: #7b8fa1; }
-
-    @@media (max-width: 768px) {
-        .grid2 { grid-template-columns: 1fr; }
-        .stats { grid-template-columns: 1fr 1fr; }
-        .quick-actions { grid-template-columns: 1fr 1fr; }
-    }
-</style>
-
-@{
-    var avatarColors = new[] {
-        ("background:#dbeafe","color:#1e40af"),
-        ("background:#d1fae5","color:#065f46"),
-        ("background:#fce7f3","color:#9d174d"),
-        ("background:#fef3c7","color:#92400e"),
-        ("background:#ede9fe","color:#5b21b6")
-    };
-    int i = 0;
-}
-
-<div class="dash">
-
+<div class="max-w-7xl mx-auto">
     <!-- Top Bar -->
-    <div class="topbar">
+    <div class="flex justify-between items-start mb-10">
         <div>
-            <h1>Admin Dashboard</h1>
-            <div class="topbar-sub">Cavendish ACMIS Portal</div>
+            <h1 class="text-4xl font-semibold text-gray-900 dark:text-white">Admin Dashboard</h1>
+            <p class="text-gray-500 dark:text-gray-400 mt-1">Overview of Cavendish University ACMIS System</p>
         </div>
-        <div class="topbar-right">
-            <span class="date-badge">@DateTime.Now.ToString("MMMM yyyy")</span>
-            <a asp-action="ExportStudents" class="export-btn">
-                <i class="bi bi-download"></i> Export Students
-            </a>
-        </div>
+        <a asp-action="ExportStudents"
+               class="flex items-center gap-3 bg-[#0f172a] hover:bg-[#1e2937] text-white px-6 py-3 rounded-2xl transition">
+            <i class="bi bi-download"></i>
+            Export Students
+        </a>
     </div>
 
     <!-- Stats -->
-    <div class="stats">
-        <div class="stat">
-            <div class="stat-accent" style="background:#dbeafe"></div>
-            <div class="stat-label">Total Students</div>
-            <div class="stat-val">@ViewBag.TotalStudents</div>
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-10">
+        <div class="glass rounded-3xl p-6 shadow-sm">
+            <p class="text-sm text-gray-500 dark:text-gray-400">Total Students</p>
+            <p class="text-5xl font-semibold text-gray-900 dark:text-white mt-3">@ViewBag.TotalStudents</p>
         </div>
-        <div class="stat">
-            <div class="stat-accent" style="background:#d1fae5"></div>
-            <div class="stat-label">Total Courses</div>
-            <div class="stat-val">@ViewBag.TotalCourses</div>
+        <div class="glass rounded-3xl p-6 shadow-sm">
+            <p class="text-sm text-gray-500 dark:text-gray-400">Total Courses</p>
+            <p class="text-5xl font-semibold text-gray-900 dark:text-white mt-3">@ViewBag.TotalCourses</p>
+        </div>
+        <div class="glass rounded-3xl p-6 shadow-sm">
+            <p class="text-sm text-gray-500 dark:text-gray-400">Active Modules</p>
+            <p class="text-5xl font-semibold text-gray-900 dark:text-white mt-3">@(ViewBag.TotalModules ?? "—")</p>
+        </div>
+        <div class="glass rounded-3xl p-6 shadow-sm bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-slate-800 dark:to-slate-700">
+            <p class="text-sm text-gray-500 dark:text-gray-400">CGPA Average</p>
+            <p class="text-5xl font-semibold text-indigo-600 dark:text-indigo-400 mt-3">3.82</p>
         </div>
     </div>
 
-    <!-- Main Grid -->
-    <div class="grid2">
-
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
         <!-- Top Students -->
-        <div class="card">
-            <div class="card-title">
-                Top Performing Students
-                <span class="card-subtitle">By average score</span>
+        <div class="glass rounded-3xl p-8">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-xl font-semibold">Top Performing Students</h2>
+                <span class="text-sm text-gray-500">By Average Score</span>
             </div>
-            @if (ViewBag.BestStudents != null)
+            @foreach (var s in bestStudents)
             {
-                foreach (var s in ViewBag.BestStudents)
-                {
-                    var initials = string.Concat(((string)s.Student.FullName)
-                        .Split(' ', StringSplitOptions.RemoveEmptyEntries)
-                        .Take(2).Select(w => w[0]));
-                    var (bg, fg) = avatarColors[i % avatarColors.Length];
-                    double score = (double)s.AvgScore;
-                    int barWidth = (int)Math.Min(score, 100);
-                    i++;
-                    <div class="student-row">
-                        <div class="avatar" style="@bg;@fg">@initials</div>
-                        <div class="sname">@s.Student.FullName</div>
-                        <div class="score-bar-wrap">
-                            <div class="score-bar" style="width:@(barWidth)%"></div>
-                        </div>
-                        <div class="score-num">@score.ToString("0.0")</div>
+                var student = s.Student;
+                double score = s.AvgScore;
+                <div class="flex items-center gap-4 py-4 border-b border-gray-100 dark:border-slate-700 last:border-none">
+                    <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center text-white font-semibold text-sm">
+                        @student.FullName?.Substring(0, 1)
                     </div>
-                }
+                    <div class="flex-1">
+                        <p class="font-medium">@student.FullName</p>
+                        <p class="text-sm text-gray-500">@student.Programme</p>
+                    </div>
+                    <div class="text-right">
+                        <p class="font-mono font-semibold text-lg">@score.ToString("0.0")</p>
+                    </div>
+                </div>
             }
         </div>
 
-        <!-- Fee Defaulters -->
-        <div class="card">
-            <div class="card-title">
-                Fee Defaulters
-                <span class="badge-red">Needs attention</span>
+        <!-- Quick Actions -->
+        <div class="glass rounded-3xl p-8">
+            <h2 class="text-xl font-semibold mb-6">Quick Actions</h2>
+            <div class="grid grid-cols-2 gap-4">
+                <a asp-action="AddStudent" class="group p-6 rounded-3xl border border-gray-100 dark:border-slate-700 hover:border-blue-200 hover:bg-blue-50 dark:hover:bg-slate-800 transition flex flex-col items-center text-center">
+                    <div class="w-14 h-14 bg-blue-100 dark:bg-blue-900 rounded-2xl flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition">👤</div>
+                    <p class="font-medium">Add New Student</p>
+                </a>
+                <a asp-action="AddCourse" class="group p-6 rounded-3xl border border-gray-100 dark:border-slate-700 hover:border-blue-200 hover:bg-blue-50 dark:hover:bg-slate-800 transition flex flex-col items-center text-center">
+                    <div class="w-14 h-14 bg-emerald-100 dark:bg-emerald-900 rounded-2xl flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition">📚</div>
+                    <p class="font-medium">Add New Course</p>
+                </a>
+                <a asp-action="AddModule" class="group p-6 rounded-3xl border border-gray-100 dark:border-slate-700 hover:border-blue-200 hover:bg-blue-50 dark:hover:bg-slate-800 transition flex flex-col items-center text-center">
+                    <div class="w-14 h-14 bg-violet-100 dark:bg-violet-900 rounded-2xl flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition">📖</div>
+                    <p class="font-medium">Add New Module</p>
+                </a>
+                <a asp-action="EnterResult" class="group p-6 rounded-3xl border border-gray-100 dark:border-slate-700 hover:border-blue-200 hover:bg-blue-50 dark:hover:bg-slate-800 transition flex flex-col items-center text-center">
+                    <div class="w-14 h-14 bg-amber-100 dark:bg-amber-900 rounded-2xl flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition">📝</div>
+                    <p class="font-medium">Enter Result</p>
+                </a>
             </div>
-            @if (ViewBag.Defaulters != null)
-            {
-                foreach (var d in ViewBag.Defaulters)
-                {
-                    <div class="def-row">
-                        <div style="flex:1">
-                            <div class="def-name">@d.FullName</div>
-                            <div class="def-prog">@d.Programme</div>
-                        </div>
-                        <div class="def-bal">@d.AccountBalance.ToString("N0")</div>
-                    </div>
-                }
-            }
         </div>
     </div>
-
-    <!-- Quick Actions -->
-    <div class="quick-actions">
-        <a asp-action="AddStudent" class="qa">
-            <div class="qa-icon" style="background:#dbeafe">
-                <i class="bi bi-person-plus" style="color:#1e40af"></i>
-            </div>
-            <div class="qa-label">Add Student</div>
-        </a>
-        <a asp-action="AddCourse" class="qa">
-            <div class="qa-icon" style="background:#d1fae5">
-                <i class="bi bi-journal-plus" style="color:#065f46"></i>
-            </div>
-            <div class="qa-label">Add Course</div>
-        </a>
-        <a asp-action="EnterResult" class="qa">
-            <div class="qa-icon" style="background:#fef3c7">
-                <i class="bi bi-clipboard-plus" style="color:#92400e"></i>
-            </div>
-            <div class="qa-label">Enter Result</div>
-        </a>
-    </div>
-
 </div>

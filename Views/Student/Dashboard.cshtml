@@ -2,36 +2,76 @@
     ViewData["Title"] = "Dashboard";
     var user = ViewBag.User as CavendishACMISPortal.Models.User;
 }
-<div class="max-w-7xl mx-auto">
-    <h1 class="text-4xl font-semibold text-[#121e38]">Good morning, <span class="text-[#4E93CC]">@user?.FullName</span> 👋</h1>
-    <p class="text-gray-600 mt-1">Welcome to Cavendish ACMIS Portal</p>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-        <div class="glass rounded-3xl p-6 shadow-xl">
-            <p class="text-sm text-gray-500">Account Balance</p>
-            <p class="text-5xl font-semibold text-[#121e38] mt-2">@user?.AccountBalance.ToString("N0")/=</p>
-            <span class="inline-block mt-3 px-4 py-1 bg-green-100 text-green-700 text-sm rounded-2xl">Normal Progress</span>
+<div class="max-w-7xl mx-auto">
+    <!-- Welcome Header -->
+    <div class="flex justify-between items-start mb-10">
+        <div>
+            <h1 class="text-4xl font-semibold text-gray-900 dark:text-white">
+                Good morning, <span class="text-[#4E93CC]">@user?.FullName</span> 👋
+            </h1>
+            <p class="text-gray-500 dark:text-gray-400 mt-1">Welcome back to your academic portal</p>
         </div>
-        <div class="glass rounded-3xl p-6 shadow-xl">
-            <p class="text-sm text-gray-500">Current Semester</p>
-            <p class="text-4xl font-semibold text-[#121e38] mt-2">Semester II • 2025/2026</p>
-        </div>
-        <div class="glass rounded-3xl p-6 shadow-xl flex flex-col justify-between">
-            <div>
-                <p class="text-sm text-gray-500">Graduation Invitation Ready</p>
-                <p class="font-medium text-[#121e38]">INV-VIP-26-622096-NAC</p>
-            </div>
-            <a href="#" class="bg-green-600 text-white px-8 py-4 rounded-3xl inline-flex items-center gap-2 hover:bg-green-700 transition">Download Invitation</a>
+        <div class="text-right">
+            <p class="text-sm text-gray-500 dark:text-gray-400">Student No</p>
+            <p class="font-mono text-xl font-semibold text-gray-900 dark:text-white">@user?.Username</p>
         </div>
     </div>
 
-    <div class="mt-12">
-        <h2 class="text-2xl font-semibold mb-4">Quick Actions</h2>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <a asp-action="GeneratePRN" class="block p-6 bg-white rounded-3xl shadow hover:shadow-xl transition text-center">Generate PRN</a>
-            <a asp-action="Enrolment" class="block p-6 bg-white rounded-3xl shadow hover:shadow-xl transition text-center">Enrol / Register Modules</a>
-            <a asp-action="Results" class="block p-6 bg-white rounded-3xl shadow hover:shadow-xl transition text-center">View Results</a>
-            <a asp-action="BioData" class="block p-6 bg-white rounded-3xl shadow hover:shadow-xl transition text-center">Update Profile</a>
+    <!-- Stats Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+        <div class="glass rounded-3xl p-8 shadow-sm">
+            <p class="text-sm text-gray-500 dark:text-gray-400">Current Semester</p>
+            <p class="text-4xl font-semibold text-gray-900 dark:text-white mt-3">Semester II</p>
+            <p class="text-[#4E93CC] font-medium">2025/2026 Academic Year</p>
+        </div>
+
+        <div class="glass rounded-3xl p-8 shadow-sm">
+            <p class="text-sm text-gray-500 dark:text-gray-400">Academic Status</p>
+            <p class="text-4xl font-semibold text-emerald-600 mt-3">Normal Progress</p>
+            <p class="text-sm text-gray-500">All good • On Track</p>
+        </div>
+
+        <div class="glass rounded-3xl p-8 shadow-sm bg-gradient-to-br from-indigo-50 to-blue-50 dark:from-slate-800 dark:to-slate-700">
+            <p class="text-sm text-gray-500 dark:text-gray-400">Graduation Invitation</p>
+            <p class="font-medium text-[#121e38] dark:text-white mt-1">Ready for Download</p>
+            <a href="#" class="mt-6 inline-flex items-center gap-2 bg-green-600 text-white px-6 py-3 rounded-2xl hover:bg-green-700 transition">
+                <i class="bi bi-download"></i> Download Invitation
+            </a>
+        </div>
+    </div>
+
+    <!-- Quick Actions -->
+    <div>
+        <h2 class="text-2xl font-semibold mb-6 text-gray-900 dark:text-white">Quick Actions</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <a asp-action="BioData" 
+               class="group glass rounded-3xl p-8 hover:shadow-xl transition flex flex-col items-center text-center">
+                <div class="w-16 h-16 bg-blue-100 dark:bg-blue-900 rounded-2xl flex items-center justify-center text-4xl mb-5 group-hover:scale-110 transition">👤</div>
+                <p class="font-medium text-gray-900 dark:text-white">Bio Data</p>
+                <p class="text-sm text-gray-500 dark:text-gray-400">Update Profile</p>
+            </a>
+
+            <a asp-action="Results" 
+               class="group glass rounded-3xl p-8 hover:shadow-xl transition flex flex-col items-center text-center">
+                <div class="w-16 h-16 bg-emerald-100 dark:bg-emerald-900 rounded-2xl flex items-center justify-center text-4xl mb-5 group-hover:scale-110 transition">📊</div>
+                <p class="font-medium text-gray-900 dark:text-white">My Results</p>
+                <p class="text-sm text-gray-500 dark:text-gray-400">View CGPA</p>
+            </a>
+
+            <a asp-action="Enrolment" 
+               class="group glass rounded-3xl p-8 hover:shadow-xl transition flex flex-col items-center text-center">
+                <div class="w-16 h-16 bg-amber-100 dark:bg-amber-900 rounded-2xl flex items-center justify-center text-4xl mb-5 group-hover:scale-110 transition">📝</div>
+                <p class="font-medium text-gray-900 dark:text-white">Enrolment</p>
+                <p class="text-sm text-gray-500 dark:text-gray-400">Register Modules</p>
+            </a>
+
+            <a asp-action="GeneratePRN" 
+               class="group glass rounded-3xl p-8 hover:shadow-xl transition flex flex-col items-center text-center">
+                <div class="w-16 h-16 bg-purple-100 dark:bg-purple-900 rounded-2xl flex items-center justify-center text-4xl mb-5 group-hover:scale-110 transition">🔢</div>
+                <p class="font-medium text-gray-900 dark:text-white">Generate PRN</p>
+                <p class="text-sm text-gray-500 dark:text-gray-400">Make Payment</p>
+            </a>
         </div>
     </div>
 </div>
