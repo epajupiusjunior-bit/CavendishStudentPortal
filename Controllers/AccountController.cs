@@ -18,13 +18,15 @@ namespace CavendishACMISPortal.Controllers
             if (user != null)
             {
                 HttpContext.Session.SetString("UserId", user.Id.ToString());
-                HttpContext.Session.SetString("Username", user.Username);
-                HttpContext.Session.SetString("FullName", user.FullName);
                 HttpContext.Session.SetString("Role", user.Role);
+                HttpContext.Session.SetString("FullName", user.FullName);
 
-                return user.Role == "Admin"
-                    ? RedirectToAction("Dashboard", "Admin")
-                    : RedirectToAction("Dashboard", "Student");
+                return user.Role switch
+                {
+                    "Admin" => RedirectToAction("Dashboard", "Admin"),
+                    "Lecturer" => RedirectToAction("Dashboard", "Lecturer"),
+                    _ => RedirectToAction("Dashboard", "Student")
+                };
             }
             ViewBag.Error = "Invalid credentials";
             return View();

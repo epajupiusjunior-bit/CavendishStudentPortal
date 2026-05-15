@@ -19,13 +19,12 @@ var app = builder.Build();
 app.UseStaticFiles();
 app.UseRouting();
 app.UseSession();
-app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Account}/{action=Login}/{id?}");
 
-// Auto-create DB and seed data
+// Seed Database
 using (var scope = app.Services.CreateScope())
 {
     var context = scope.ServiceProvider.GetRequiredService<AppDbContext>();

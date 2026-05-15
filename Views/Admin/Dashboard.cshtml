@@ -1,90 +1,18 @@
 ﻿@{
     ViewData["Title"] = "Admin Dashboard";
-    var bestStudents = ViewBag.BestStudents as List<dynamic> ?? new List<dynamic>();
-    var defaulters = ViewBag.Defaulters as List<CavendishACMISPortal.Models.User> ?? new List<CavendishACMISPortal.Models.User>();
 }
-
 <div class="max-w-7xl mx-auto">
-    <!-- Top Bar -->
-    <div class="flex justify-between items-start mb-10">
-        <div>
-            <h1 class="text-4xl font-semibold text-gray-900 dark:text-white">Admin Dashboard</h1>
-            <p class="text-gray-500 dark:text-gray-400 mt-1">Overview of Cavendish University ACMIS System</p>
-        </div>
-        <a asp-action="ExportStudents"
-               class="flex items-center gap-3 bg-[#0f172a] hover:bg-[#1e2937] text-white px-6 py-3 rounded-2xl transition">
-            <i class="bi bi-download"></i>
-            Export Students
-        </a>
-    </div>
+    <h1 class="text-4xl font-semibold mb-2">Admin Dashboard</h1>
+    <p class="text-gray-500">Welcome back, System Administrator</p>
 
-    <!-- Stats -->
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-10">
-        <div class="glass rounded-3xl p-6 shadow-sm">
-            <p class="text-sm text-gray-500 dark:text-gray-400">Total Students</p>
-            <p class="text-5xl font-semibold text-gray-900 dark:text-white mt-3">@ViewBag.TotalStudents</p>
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mt-10">
+        <div class="glass rounded-3xl p-6">
+            <p class="text-sm text-gray-500">Total Students</p>
+            <p class="text-5xl font-semibold mt-3">@ViewBag.TotalStudents</p>
         </div>
-        <div class="glass rounded-3xl p-6 shadow-sm">
-            <p class="text-sm text-gray-500 dark:text-gray-400">Total Courses</p>
-            <p class="text-5xl font-semibold text-gray-900 dark:text-white mt-3">@ViewBag.TotalCourses</p>
-        </div>
-        <div class="glass rounded-3xl p-6 shadow-sm">
-            <p class="text-sm text-gray-500 dark:text-gray-400">Active Modules</p>
-            <p class="text-5xl font-semibold text-gray-900 dark:text-white mt-3">@(ViewBag.TotalModules ?? "—")</p>
-        </div>
-        <div class="glass rounded-3xl p-6 shadow-sm bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-slate-800 dark:to-slate-700">
-            <p class="text-sm text-gray-500 dark:text-gray-400">CGPA Average</p>
-            <p class="text-5xl font-semibold text-indigo-600 dark:text-indigo-400 mt-3">3.82</p>
-        </div>
-    </div>
-
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        <!-- Top Students -->
-        <div class="glass rounded-3xl p-8">
-            <div class="flex justify-between items-center mb-6">
-                <h2 class="text-xl font-semibold">Top Performing Students</h2>
-                <span class="text-sm text-gray-500">By Average Score</span>
-            </div>
-            @foreach (var s in bestStudents)
-            {
-                var student = s.Student;
-                double score = s.AvgScore;
-                <div class="flex items-center gap-4 py-4 border-b border-gray-100 dark:border-slate-700 last:border-none">
-                    <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center text-white font-semibold text-sm">
-                        @student.FullName?.Substring(0, 1)
-                    </div>
-                    <div class="flex-1">
-                        <p class="font-medium">@student.FullName</p>
-                        <p class="text-sm text-gray-500">@student.Programme</p>
-                    </div>
-                    <div class="text-right">
-                        <p class="font-mono font-semibold text-lg">@score.ToString("0.0")</p>
-                    </div>
-                </div>
-            }
-        </div>
-
-        <!-- Quick Actions -->
-        <div class="glass rounded-3xl p-8">
-            <h2 class="text-xl font-semibold mb-6">Quick Actions</h2>
-            <div class="grid grid-cols-2 gap-4">
-                <a asp-action="AddStudent" class="group p-6 rounded-3xl border border-gray-100 dark:border-slate-700 hover:border-blue-200 hover:bg-blue-50 dark:hover:bg-slate-800 transition flex flex-col items-center text-center">
-                    <div class="w-14 h-14 bg-blue-100 dark:bg-blue-900 rounded-2xl flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition">👤</div>
-                    <p class="font-medium">Add New Student</p>
-                </a>
-                <a asp-action="AddCourse" class="group p-6 rounded-3xl border border-gray-100 dark:border-slate-700 hover:border-blue-200 hover:bg-blue-50 dark:hover:bg-slate-800 transition flex flex-col items-center text-center">
-                    <div class="w-14 h-14 bg-emerald-100 dark:bg-emerald-900 rounded-2xl flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition">📚</div>
-                    <p class="font-medium">Add New Course</p>
-                </a>
-                <a asp-action="AddModule" class="group p-6 rounded-3xl border border-gray-100 dark:border-slate-700 hover:border-blue-200 hover:bg-blue-50 dark:hover:bg-slate-800 transition flex flex-col items-center text-center">
-                    <div class="w-14 h-14 bg-violet-100 dark:bg-violet-900 rounded-2xl flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition">📖</div>
-                    <p class="font-medium">Add New Module</p>
-                </a>
-                <a asp-action="EnterResult" class="group p-6 rounded-3xl border border-gray-100 dark:border-slate-700 hover:border-blue-200 hover:bg-blue-50 dark:hover:bg-slate-800 transition flex flex-col items-center text-center">
-                    <div class="w-14 h-14 bg-amber-100 dark:bg-amber-900 rounded-2xl flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition">📝</div>
-                    <p class="font-medium">Enter Result</p>
-                </a>
-            </div>
+        <div class="glass rounded-3xl p-6">
+            <p class="text-sm text-gray-500">Total Courses</p>
+            <p class="text-5xl font-semibold mt-3">@ViewBag.TotalCourses</p>
         </div>
     </div>
 </div>

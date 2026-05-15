@@ -9,14 +9,9 @@ namespace CavendishACMISPortal.Data
 
         public DbSet<User> Users { get; set; }
         public DbSet<Course> Courses { get; set; }
-
-        // ✅ Fixed ambiguous reference
         public DbSet<Module> Modules { get; set; }
-
-        public DbSet<StudentModuleRegistration> Registrations { get; set; }
+        public DbSet<LecturerModuleAssignment> LecturerAssignments { get; set; }
         public DbSet<Result> Results { get; set; }
-        public DbSet<Invoice> Invoices { get; set; }
-        public DbSet<GeneratedPRN> GeneratedPRNs { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

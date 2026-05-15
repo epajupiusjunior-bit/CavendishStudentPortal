@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "My Students";
+    var students = Model as List<CavendishACMISPortal.Models.User>;
+    int moduleId = ViewBag.ModuleId != null ? (int)ViewBag.ModuleId : 0;
+}
+<div class="max-w-7xl mx-auto">
+    <h2 class="text-3xl font-semibold mb-8">Students in this Module</h2>
+    <div class="glass rounded-3xl p-8">
+        <table class="w-full">
+            <thead class="bg-gray-100 dark:bg-slate-800">
+                <tr>
+                    <th class="px-8 py-4 text-left">Student Name</th>
+                    <th class="px-8 py-4 text-left">Student No</th>
+                    <th class="px-8 py-4 text-left">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var s in students ?? new List<CavendishACMISPortal.Models.User>())
+                {
+                    <tr class="border-t">
+                        <td class="px-8 py-4">@s.FullName</td>
+                        <td class="px-8 py-4">@s.Username</td>
+                        <td class="px-8 py-4">
+                            <a asp-controller="Lecturer" asp-action="AddResult" asp-route-moduleId="@moduleId"
+                               class="text-indigo-600 hover:underline">Enter Result</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
