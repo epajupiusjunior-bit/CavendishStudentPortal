@@ -1,0 +1,38 @@
+﻿@{
+    ViewData["Title"] = "Lecturers";
+    var lecturers = Model as List<CavendishACMISPortal.Models.User>;
+}
+<div class="max-w-7xl mx-auto">
+    <div class="flex justify-between mb-8">
+        <h2 class="text-3xl font-semibold">All Lecturers</h2>
+        <a asp-action="AddLecturer" class="bg-green-600 text-white px-8 py-4 rounded-3xl hover:bg-green-700">+ Add New Lecturer</a>
+    </div>
+
+    <div class="glass rounded-3xl overflow-hidden">
+        <table class="w-full">
+            <thead class="bg-[#0f172a] text-white">
+                <tr>
+                    <th class="px-8 py-4 text-left">Name</th>
+                    <th class="px-8 py-4 text-left">Teacher ID</th>
+                    <th class="px-8 py-4 text-left">Department</th>
+                    <th class="px-8 py-4 text-left">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var l in lecturers ?? new List<CavendishACMISPortal.Models.User>())
+                {
+                    <tr class="border-t hover:bg-gray-50">
+                        <td class="px-8 py-4">@l.FullName</td>
+                        <td class="px-8 py-4">@l.Username</td>
+                        <td class="px-8 py-4">@l.Department</td>
+                        <td class="px-8 py-4">
+                            <a asp-action="EditLecturer" asp-route-id="@l.Id" class="text-blue-600 hover:underline mr-4">Edit</a>
+                            <a asp-action="AssignModules" asp-route-lecturerId="@l.Id" class="text-indigo-600 hover:underline mr-4">Assign Modules</a>
+                            <a asp-action="DeleteLecturer" asp-route-id="@l.Id" onclick="return confirm('Delete lecturer?')" class="text-red-600 hover:underline">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

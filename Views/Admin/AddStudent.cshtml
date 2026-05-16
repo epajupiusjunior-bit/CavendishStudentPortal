@@ -1,73 +1,45 @@
 ﻿@{
-    ViewData["Title"] = "Add New Student";
-    var courses = ViewBag.Courses as List<CavendishACMISPortal.Models.Course> ?? new List<CavendishACMISPortal.Models.Course>();
+    ViewData["Title"] = "Add Student";
 }
 <div class="max-w-4xl mx-auto">
-    <h2 class="text-3xl font-semibold mb-8">Register New Student</h2>
-    
-    <div class="glass rounded-3xl p-8">
+    <h2 class="text-3xl font-semibold mb-8">Add New Student</h2>
+    <div class="glass rounded-3xl p-10">
         <form asp-action="AddStudent" method="post" enctype="multipart/form-data">
             <div class="grid grid-cols-2 gap-8">
-                <!-- Profile Picture -->
-                <div class="col-span-2 md:col-span-1">
-                    <label class="block text-sm font-medium mb-3">Profile Picture</label>
-                    <div class="flex flex-col items-center border-2 border-dashed border-gray-300 rounded-3xl p-6 hover:border-[#4E93CC]">
-                        <i class="bi bi-camera text-4xl text-gray-400 mb-3"></i>
-                        <input type="file" name="profilePicture" accept="image/*" class="hidden" id="photoUpload" />
-                        <label for="photoUpload" class="cursor-pointer text-[#4E93CC] font-medium">Choose Photo</label>
-                        <p class="text-xs text-gray-500 mt-2">JPG, PNG • Max 2MB</p>
-                    </div>
-                </div>
-
-                <div class="col-span-2 md:col-span-1 space-y-6">
-                    <div>
-                        <label class="block text-sm font-medium mb-2">Full Name</label>
-                        <input name="FullName" class="w-full px-5 py-4 rounded-2xl border focus:border-[#4E93CC]" required />
-                    </div>
-                    <div>
-                        <label class="block text-sm font-medium mb-2">Student Number</label>
-                        <input name="Username" class="w-full px-5 py-4 rounded-2xl border focus:border-[#4E93CC]" required />
-                    </div>
-                    <div>
-                        <label class="block text-sm font-medium mb-2">Password</label>
-                        <input name="Password" type="password" class="w-full px-5 py-4 rounded-2xl border focus:border-[#4E93CC]" required />
-                    </div>
-                </div>
-
                 <div>
-                    <label class="block text-sm font-medium mb-2">Programme / Course</label>
-                    <select name="Programme" class="w-full px-5 py-4 rounded-2xl border focus:border-[#4E93CC]">
-                        @foreach (var c in courses)
-                        {
-                            <option value="@c.CourseName">@c.CourseName</option>
-                        }
-                    </select>
+                    <label>Profile Picture</label>
+                    <input type="file" name="profilePicture" accept="image/*" class="mt-2" />
                 </div>
-
                 <div>
-                    <label class="block text-sm font-medium mb-2">District</label>
-                    <input name="District" class="w-full px-5 py-4 rounded-2xl border focus:border-[#4E93CC]" />
+                    <label>Full Name</label>
+                    <input name="FullName" class="w-full px-5 py-4 rounded-2xl border mt-2" required />
                 </div>
-
                 <div>
-                    <label class="block text-sm font-medium mb-2">Email</label>
-                    <input name="Email" type="email" class="w-full px-5 py-4 rounded-2xl border focus:border-[#4E93CC]" />
+                    <label>Student Number</label>
+                    <input name="Username" class="w-full px-5 py-4 rounded-2xl border mt-2" required />
                 </div>
-
                 <div>
-                    <label class="block text-sm font-medium mb-2">Phone</label>
-                    <input name="Phone" class="w-full px-5 py-4 rounded-2xl border focus:border-[#4E93CC]" />
+                    <label>Password</label>
+                    <input name="Password" type="password" class="w-full px-5 py-4 rounded-2xl border mt-2" required />
                 </div>
-
                 <div>
-                    <label class="block text-sm font-medium mb-2">Initial Account Balance (UGX)</label>
-                    <input name="AccountBalance" type="number" value="0" class="w-full px-5 py-4 rounded-2xl border focus:border-[#4E93CC]" />
+                    <label>Programme</label>
+                    <input name="Programme" class="w-full px-5 py-4 rounded-2xl border mt-2" required />
+                </div>
+                <div>
+                    <label>Email</label>
+                    <input name="Email" type="email" class="w-full px-5 py-4 rounded-2xl border mt-2" />
+                </div>
+                <div>
+                    <label>Phone</label>
+                    <input name="Phone" class="w-full px-5 py-4 rounded-2xl border mt-2" />
+                </div>
+                <div>
+                    <label>District</label>
+                    <input name="District" class="w-full px-5 py-4 rounded-2xl border mt-2" />
                 </div>
             </div>
-
-            <button type="submit" class="mt-12 w-full bg-green-600 text-white py-5 rounded-3xl font-semibold text-lg hover:bg-green-700 transition">
-                Register Student
-            </button>
+            <button type="submit" class="mt-10 w-full bg-green-600 text-white py-5 rounded-3xl font-semibold">Register Student</button>
         </form>
     </div>
 </div>

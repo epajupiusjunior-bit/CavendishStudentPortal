@@ -1,124 +1,552 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Cavendish University Uganda</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
+    <title>@ViewData["Title"] - Cavendish ACMIS</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
 
     <style>
         :root {
-        --navy: #07111f;
+            /* Light Mode */
+            --bg-canvas:       #f0ebe3;
+            --bg-sidebar:      #1a1a2e;
+            --bg-sidebar-deep: #12121f;
+            --bg-card:         #faf8f5;
+            --bg-hover:        rgba(255,255,255,0.08);
+
+            --text-primary:    #1c1917;
+            --text-secondary:  #57534e;
+            --text-muted:      #a8a29e;
+
+            --accent-primary:  #c084fc;
+            --accent-gold:     #f59e0b;
+            --accent-glow:     rgba(192, 132, 252, 0.35);
+
+            --sidebar-text:    #e2e8f0;
+            --sidebar-muted:   rgba(226,232,240,0.55);
+            --sidebar-border:  rgba(255,255,255,0.07);
+            --sidebar-active:  rgba(192,132,252,0.18);
+            --sidebar-active-border: #c084fc;
+
+            --border:          rgba(28,25,23,0.10);
+            --shadow-soft:     0 2px 16px rgba(28,25,23,0.07), 0 1px 3px rgba(28,25,23,0.05);
+            --shadow-card:     0 4px 24px rgba(28,25,23,0.08);
+
+            --divider-light:   rgba(255,255,255,0.06);
+
+            --scrollbar-thumb: rgba(120,113,108,0.3);
+        }
+
+        [data-theme="dark"] {
+            --bg-canvas:       #080b14;
+            --bg-sidebar:      #060910;
+            --bg-sidebar-deep: #030508;
+            --bg-card:         #0e1220;
+            --bg-hover:        rgba(255,255,255,0.05);
+
+            --text-primary:    #f0f4ff;
+            --text-secondary:  #94a3b8;
+            --text-muted:      #4a5568;
+
+            --accent-primary:  #818cf8;
+            --accent-gold:     #fbbf24;
+            --accent-glow:     rgba(129,140,248,0.4);
+
+            --sidebar-text:    #e2e8f0;
+            --sidebar-muted:   rgba(226,232,240,0.45);
+            --sidebar-border:  rgba(255,255,255,0.05);
+            --sidebar-active:  rgba(129,140,248,0.15);
+            --sidebar-active-border: #818cf8;
+
+            --border:          rgba(255,255,255,0.06);
+            --shadow-soft:     0 2px 20px rgba(0,0,0,0.5), 0 1px 4px rgba(0,0,0,0.4);
+            --shadow-card:     0 4px 32px rgba(0,0,0,0.4);
+
+            --divider-light:   rgba(255,255,255,0.04);
+
+            --scrollbar-thumb: rgba(129,140,248,0.25);
+        }
+
+        *, *::before, *::after { box-sizing: border-box; }
+
+        html, body {
+            margin: 0; padding: 0;
+            height: 100%;
+            transition: background-color 0.4s ease, color 0.4s ease;
         }
 
         body {
-        font-family: 'DM Sans', sans-serif;
-        background: var(--navy);
-        color: #e2e8f0;
-        min-height: 100vh;
+            font-family: 'DM Sans', system-ui, sans-serif;
+            background: var(--bg-canvas);
+            color: var(--text-primary);
         }
 
-        .glass {
-        background: rgba(255,255,255,0.06);
-        border: 1px solid rgba(255,255,255,0.1);
-        backdrop-filter: blur(20px);
+        /* ─── Canvas texture ─── */
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 0;
+            background-image:
+                url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+            opacity: 0.6;
+        }
+
+        .layout-shell {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* ═══════════════════════════════
+           SIDEBAR
+        ═══════════════════════════════ */
+        .sidebar {
+            width: 268px;
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+            background: var(--bg-sidebar);
+            position: relative;
+            overflow: hidden;
+            transition: background 0.4s ease;
+        }
+
+        /* Ambient glow blob on sidebar */
+        .sidebar::before {
+            content: '';
+            position: absolute;
+            top: -80px;
+            left: -60px;
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            background: var(--accent-glow);
+            filter: blur(80px);
+            pointer-events: none;
+            opacity: 0.6;
+            transition: background 0.4s ease;
+        }
+        .sidebar::after {
+            content: '';
+            position: absolute;
+            bottom: 60px;
+            right: -80px;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: rgba(251,191,36,0.08);
+            filter: blur(60px);
+            pointer-events: none;
+        }
+
+        /* Brand */
+        .sidebar-brand {
+            padding: 28px 24px 24px;
+            border-bottom: 1px solid var(--sidebar-border);
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            position: relative;
+            z-index: 2;
+        }
+        .sidebar-brand img {
+            height: 44px;
+            width: auto;
+            filter: drop-shadow(0 0 12px rgba(192,132,252,0.4));
+        }
+        .brand-text h1 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 17px;
+            font-weight: 700;
+            color: #fff;
+            letter-spacing: 0.04em;
+            margin: 0 0 2px;
+            line-height: 1.1;
+        }
+        .brand-text p {
+            font-size: 9.5px;
+            font-weight: 500;
+            letter-spacing: 0.18em;
+            color: var(--accent-primary);
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        /* Role badge */
+        .role-badge {
+            margin: 16px 20px 0;
+            padding: 7px 14px;
+            border-radius: 10px;
+            background: rgba(255,255,255,0.04);
+            border: 1px solid var(--sidebar-border);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            position: relative;
+            z-index: 2;
+        }
+        .role-badge-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: var(--accent-gold);
+            box-shadow: 0 0 8px rgba(251,191,36,0.6);
+            flex-shrink: 0;
+        }
+        .role-badge span {
+            font-size: 11px;
+            font-weight: 500;
+            color: var(--sidebar-muted);
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+        }
+
+        /* Nav */
+        .sidebar-nav {
+            flex: 1;
+            padding: 20px 14px;
+            overflow-y: auto;
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+        }
+
+        .nav-section-label {
+            font-size: 9.5px;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--sidebar-muted);
+            padding: 12px 12px 6px;
+            margin-top: 4px;
         }
 
         .nav-link {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        padding: 12px 16px;
-        border-radius: 12px;
-        color: rgba(255,255,255,0.75);
-        text-decoration: none;
-        transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 11px 14px;
+            border-radius: 12px;
+            color: var(--sidebar-muted);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.22s ease;
+            border-left: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
         }
-
+        .nav-link i {
+            font-size: 16px;
+            flex-shrink: 0;
+            width: 20px;
+            text-align: center;
+        }
         .nav-link:hover {
-        background: rgba(255,255,255,0.1);
-        color: white;
+            background: var(--bg-hover);
+            color: var(--sidebar-text);
+            border-left-color: var(--accent-primary);
+            transform: translateX(2px);
+        }
+        .nav-link.active {
+            background: var(--sidebar-active);
+            color: #fff;
+            border-left-color: var(--sidebar-active-border);
+        }
+        .nav-link.active i {
+            color: var(--accent-primary);
+        }
+        /* Shine ripple on hover */
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.04), transparent);
+            transform: translateX(-100%);
+            transition: transform 0.5s ease;
+        }
+        .nav-link:hover::after {
+            transform: translateX(100%);
         }
 
-        .nav-link.active {
-        background: rgba(14,90,170,0.3);
-        color: white;
+        /* Sidebar footer */
+        .sidebar-footer {
+            padding: 14px;
+            border-top: 1px solid var(--sidebar-border);
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
         }
-        /* Background Orbs */
-        .bg-orb {
-        position: fixed;
-        border-radius: 50%;
-        filter: blur(80px);
-        pointer-events: none;
-        z-index: -1;
+
+        .footer-btn {
+            display: flex;
+            align-items: center;
+            gap: 11px;
+            padding: 11px 14px;
+            border-radius: 12px;
+            color: var(--sidebar-muted);
+            font-size: 13.5px;
+            font-weight: 500;
+            cursor: pointer;
+            border: none;
+            background: none;
+            width: 100%;
+            text-decoration: none;
+            transition: all 0.22s ease;
+            font-family: 'DM Sans', system-ui, sans-serif;
+        }
+        .footer-btn:hover {
+            background: var(--bg-hover);
+            color: var(--sidebar-text);
+        }
+        .footer-btn i { font-size: 15px; width: 18px; text-align: center; }
+
+        .footer-btn.logout:hover {
+            background: rgba(239,68,68,0.12);
+            color: #fca5a5;
+        }
+
+        /* Dark toggle track */
+        .toggle-track {
+            margin-left: auto;
+            width: 34px;
+            height: 19px;
+            border-radius: 20px;
+            background: rgba(255,255,255,0.12);
+            position: relative;
+            transition: background 0.3s;
+            flex-shrink: 0;
+        }
+        [data-theme="dark"] .toggle-track {
+            background: var(--accent-primary);
+        }
+        .toggle-thumb {
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            width: 13px;
+            height: 13px;
+            border-radius: 50%;
+            background: #fff;
+            transition: transform 0.3s cubic-bezier(.34,1.56,.64,1);
+            box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+        }
+        [data-theme="dark"] .toggle-thumb {
+            transform: translateX(15px);
+        }
+
+        /* Scrollbar */
+        .sidebar-nav::-webkit-scrollbar { width: 4px; }
+        .sidebar-nav::-webkit-scrollbar-track { background: transparent; }
+        .sidebar-nav::-webkit-scrollbar-thumb {
+            background: var(--scrollbar-thumb);
+            border-radius: 4px;
+        }
+
+        /* ═══════════════════════════════
+           MAIN CONTENT
+        ═══════════════════════════════ */
+        .main-content {
+            flex: 1;
+            overflow: auto;
+            padding: 40px 44px;
+            position: relative;
+            z-index: 1;
+            transition: background 0.4s ease;
+        }
+
+        /* Subtle grid overlay on main */
+        .main-content::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 268px; right: 0; bottom: 0;
+            pointer-events: none;
+            z-index: 0;
+            background-image:
+                linear-gradient(var(--border) 1px, transparent 1px),
+                linear-gradient(90deg, var(--border) 1px, transparent 1px);
+            background-size: 40px 40px;
+            opacity: 0.4;
+        }
+
+        .main-inner {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Page-load animation */
+        @@ keyframes fadeUp {
+            from { opacity: 0; transform: translateY(16px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+        .main-inner {
+            animation: fadeUp 0.45s cubic-bezier(.22,1,.36,1) both;
+        }
+
+        /* ─── Utility classes for pages ─── */
+        .page-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 30px;
+            font-weight: 700;
+            color: var(--text-primary);
+            letter-spacing: -0.01em;
+            margin: 0 0 4px;
+        }
+        .page-subtitle {
+            font-size: 14px;
+            color: var(--text-secondary);
+            font-weight: 400;
+        }
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            box-shadow: var(--shadow-card);
+            padding: 28px;
+            transition: background 0.4s ease, box-shadow 0.4s ease;
+        }
+        .card:hover {
+            box-shadow: var(--shadow-soft), 0 0 0 1px var(--accent-primary)/0.1;
         }
     </style>
 </head>
-<body class="overflow-hidden">
-    <!-- Background Effects -->
-    <div class="bg-orb" style="width: 600px; height: 600px; background: rgba(14,90,170,0.15); top: -150px; right: -100px;"></div>
-    <div class="bg-orb" style="width: 450px; height: 450px; background: rgba(22,163,74,0.12); bottom: -120px; left: -80px;"></div>
+<body>
+    <div class="layout-shell">
 
-    <div class="flex min-h-screen">
-        <!-- Sidebar -->
-        <div class="w-72 navy flex flex-col border-r border-white/10">
-            <div class="p-6 border-b border-white/10">
-                <div class="flex items-center gap-3">
-                    <img src="/images/cavendish-logo.png" class="h-11" alt="Logo" />
-                    <div>
-                        <h1 class="text-xl font-semibold text-white tracking-tight">CAVENDISH</h1>
-                        <p class="text-xs text-blue-300">UNIVERSITY UGANDA</p>
-                    </div>
+        <!-- ══════════ SIDEBAR ══════════ -->
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <img src="/images/cavendish-logo.png" alt="Cavendish Logo" />
+                <div class="brand-text">
+                    <h1>CAVENDISH</h1>
+                    <p>University Uganda</p>
                 </div>
             </div>
 
-            <div class="flex-1 px-3 py-6 overflow-y-auto">
-                @if (Context.Session.GetString("Role") == "Admin")
+            @{
+                var role = Context.Session.GetString("Role") ?? "Student";
+            }
+
+            <div class="role-badge">
+                <span class="role-badge-dot"></span>
+                <span>@role Portal</span>
+            </div>
+
+            <nav class="sidebar-nav">
+                <div class="nav-section-label">Navigation</div>
+
+                @if (role == "Admin")
                 {
-                    <a asp-controller="Admin" asp-action="Dashboard" class="nav-link"><i class="ti ti-layout-dashboard"></i> Dashboard</a>
-                    <a asp-controller="Admin" asp-action="Students" class="nav-link"><i class="ti ti-users"></i> Students</a>
-                    <a asp-controller="Admin" asp-action="AddStudent" class="nav-link"><i class="ti ti-user-plus"></i> Add Student</a>
-                    <a asp-controller="Admin" asp-action="Courses" class="nav-link"><i class="ti ti-book"></i> Courses</a>
-                    <a asp-controller="Admin" asp-action="Modules" class="nav-link"><i class="ti ti-book-2"></i> Modules</a>
-                    <a asp-controller="Admin" asp-action="Results" class="nav-link"><i class="ti ti-clipboard-data"></i> Results</a>
+                    <a asp-controller="Admin" asp-action="Dashboard" class="nav-link">
+                        <i class="bi bi-speedometer2"></i> Dashboard
+                    </a>
+                    <a asp-controller="Admin" asp-action="Students" class="nav-link">
+                        <i class="bi bi-people"></i> Students
+                    </a>
+                    <a asp-controller="Admin" asp-action="Lecturers" class="nav-link">
+                        <i class="bi bi-person-badge"></i> Lecturers
+                    </a>
+                    <a asp-controller="Admin" asp-action="Courses" class="nav-link">
+                        <i class="bi bi-book"></i> Courses
+                    </a>
+                    <a asp-controller="Admin" asp-action="Modules" class="nav-link">
+                        <i class="bi bi-journal-text"></i> Modules
+                    </a>
+                    <a asp-controller="Admin" asp-action="Results" class="nav-link">
+                        <i class="bi bi-clipboard-data"></i> Results
+                    </a>
                 }
-                else if (Context.Session.GetString("Role") == "Lecturer")
+                else if (role == "Lecturer")
                 {
-                    <a asp-controller="Lecturer" asp-action="Dashboard" class="nav-link"><i class="ti ti-layout-dashboard"></i> Dashboard</a>
-                    <a asp-controller="Lecturer" asp-action="MyModules" class="nav-link"><i class="ti ti-book-2"></i> My Modules</a>
+                    <a asp-controller="Lecturer" asp-action="Dashboard" class="nav-link">
+                        <i class="bi bi-speedometer2"></i> Dashboard
+                    </a>
+                    <a asp-controller="Lecturer" asp-action="MyModules" class="nav-link">
+                        <i class="bi bi-journal-text"></i> My Modules
+                    </a>
                 }
                 else
                 {
-                    <a asp-controller="Student" asp-action="Dashboard" class="nav-link"><i class="ti ti-layout-dashboard"></i> Dashboard</a>
-                    <a asp-controller="Student" asp-action="BioData" class="nav-link"><i class="ti ti-user"></i> Bio Data</a>
-                    <a asp-controller="Student" asp-action="Results" class="nav-link"><i class="ti ti-award"></i> Results & CGPA</a>
+                    <a asp-controller="Student" asp-action="Dashboard" class="nav-link">
+                        <i class="bi bi-house-door"></i> Dashboard
+                    </a>
+                    <a asp-controller="Student" asp-action="BioData" class="nav-link">
+                        <i class="bi bi-person"></i> Bio Data
+                    </a>
+                    <a asp-controller="Student" asp-action="Results" class="nav-link">
+                        <i class="bi bi-trophy"></i> Results &amp; CGPA
+                    </a>
                 }
-            </div>
+            </nav>
 
-            <div class="p-4 border-t border-white/10">
-                <button onclick="toggleDarkMode()" class="nav-link w-full">
-                    <i class="ti ti-moon"></i> Dark Mode
+            <div class="sidebar-footer">
+                <button class="footer-btn" onclick="toggleDarkMode()" aria-label="Toggle dark mode">
+                    <i class="bi bi-moon-stars" id="themeIcon"></i>
+                    <span id="themeLabel">Dark Mode</span>
+                    <div class="toggle-track" aria-hidden="true">
+                        <div class="toggle-thumb"></div>
+                    </div>
                 </button>
-                <a asp-controller="Account" asp-action="Logout" class="nav-link w-full">
-                    <i class="ti ti-logout"></i> Logout
+                <a asp-controller="Account" asp-action="Logout" class="footer-btn logout">
+                    <i class="bi bi-box-arrow-right"></i> Logout
                 </a>
             </div>
-        </div>
+        </aside>
 
-        <!-- Main Content -->
-        <div class="flex-1 p-10 overflow-auto">
-            @RenderBody()
-        </div>
+        <!-- ══════════ MAIN ══════════ -->
+        <main class="main-content">
+            <div class="main-inner">
+                @RenderBody()
+            </div>
+        </main>
     </div>
 
     <script>
+        (function () {
+            // Restore saved theme instantly before paint
+            var saved = localStorage.getItem('acmis-theme') || 'light';
+            document.documentElement.setAttribute('data-theme', saved);
+            syncThemeUI(saved);
+        })();
+
         function toggleDarkMode() {
-        document.documentElement.classList.toggle('dark');
+            var current = document.documentElement.getAttribute('data-theme');
+            var next = current === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', next);
+            localStorage.setItem('acmis-theme', next);
+            syncThemeUI(next);
         }
+
+        function syncThemeUI(theme) {
+            var icon  = document.getElementById('themeIcon');
+            var label = document.getElementById('themeLabel');
+            if (!icon || !label) return;
+            if (theme === 'dark') {
+                icon.className  = 'bi bi-brightness-high';
+                label.textContent = 'Light Mode';
+            } else {
+                icon.className  = 'bi bi-moon-stars';
+                label.textContent = 'Dark Mode';
+            }
+        }
+
+        // Highlight active nav link
+        document.querySelectorAll('.nav-link').forEach(function(link) {
+            if (link.href === window.location.href) {
+                link.classList.add('active');
+            }
+        });
     </script>
 </body>
 </html>

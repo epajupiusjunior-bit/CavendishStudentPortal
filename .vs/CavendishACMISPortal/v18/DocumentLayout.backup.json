@@ -7,28 +7,92 @@
       "RelativeMoniker": "D:0:0:{E64A777D-EBDC-EB2B-ACC4-7EECD7CF9558}|CavendishACMISPortal.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E64A777D-EBDC-EB2B-ACC4-7EECD7CF9558}|CavendishACMISPortal.csproj|c:\\users\\epaju pius junior\\documents\\year 2 sem 1\\asp.net\u0026c#\\individual project\\cavendishstudentportal\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E64A777D-EBDC-EB2B-ACC4-7EECD7CF9558}|CavendishACMISPortal.csproj|solutionrelative:views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{E64A777D-EBDC-EB2B-ACC4-7EECD7CF9558}|CavendishACMISPortal.csproj|c:\\users\\epaju pius junior\\documents\\year 2 sem 1\\asp.net\u0026c#\\individual project\\cavendishstudentportal\\views\\admin\\assignmodules.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E64A777D-EBDC-EB2B-ACC4-7EECD7CF9558}|CavendishACMISPortal.csproj|solutionrelative:views\\admin\\assignmodules.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\EPAJU PIUS JUNIOR\\Documents\\YEAR 2 SEM 1\\ASP.NET\u0026C#\\Individual Project\\CavendishStudentPortal\\Migrations\\20260515134125_NewCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20260515134125_NewCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E64A777D-EBDC-EB2B-ACC4-7EECD7CF9558}|CavendishACMISPortal.csproj|c:\\users\\epaju pius junior\\documents\\year 2 sem 1\\asp.net\u0026c#\\individual project\\cavendishstudentportal\\views\\admin\\lecturers.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E64A777D-EBDC-EB2B-ACC4-7EECD7CF9558}|CavendishACMISPortal.csproj|solutionrelative:views\\admin\\lecturers.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\EPAJU PIUS JUNIOR\\Documents\\YEAR 2 SEM 1\\ASP.NET\u0026C#\\Individual Project\\CavendishStudentPortal\\Migrations\\20260515133505_UpdateForThreeTiers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20260515133505_UpdateForThreeTiers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E64A777D-EBDC-EB2B-ACC4-7EECD7CF9558}|CavendishACMISPortal.csproj|c:\\users\\epaju pius junior\\documents\\year 2 sem 1\\asp.net\u0026c#\\individual project\\cavendishstudentportal\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E64A777D-EBDC-EB2B-ACC4-7EECD7CF9558}|CavendishACMISPortal.csproj|solutionrelative:controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E64A777D-EBDC-EB2B-ACC4-7EECD7CF9558}|CavendishACMISPortal.csproj|c:\\users\\epaju pius junior\\documents\\year 2 sem 1\\asp.net\u0026c#\\individual project\\cavendishstudentportal\\controllers\\lecturercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E64A777D-EBDC-EB2B-ACC4-7EECD7CF9558}|CavendishACMISPortal.csproj|solutionrelative:controllers\\lecturercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E64A777D-EBDC-EB2B-ACC4-7EECD7CF9558}|CavendishACMISPortal.csproj|c:\\users\\epaju pius junior\\documents\\year 2 sem 1\\asp.net\u0026c#\\individual project\\cavendishstudentportal\\migrations\\20260516120027_updateresultwithcats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E64A777D-EBDC-EB2B-ACC4-7EECD7CF9558}|CavendishACMISPortal.csproj|solutionrelative:migrations\\20260516120027_updateresultwithcats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E64A777D-EBDC-EB2B-ACC4-7EECD7CF9558}|CavendishACMISPortal.csproj|c:\\users\\epaju pius junior\\documents\\year 2 sem 1\\asp.net\u0026c#\\individual project\\cavendishstudentportal\\views\\student\\results.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E64A777D-EBDC-EB2B-ACC4-7EECD7CF9558}|CavendishACMISPortal.csproj|solutionrelative:views\\student\\results.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E64A777D-EBDC-EB2B-ACC4-7EECD7CF9558}|CavendishACMISPortal.csproj|c:\\users\\epaju pius junior\\documents\\year 2 sem 1\\asp.net\u0026c#\\individual project\\cavendishstudentportal\\views\\admin\\results.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E64A777D-EBDC-EB2B-ACC4-7EECD7CF9558}|CavendishACMISPortal.csproj|solutionrelative:views\\admin\\results.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E64A777D-EBDC-EB2B-ACC4-7EECD7CF9558}|CavendishACMISPortal.csproj|c:\\users\\epaju pius junior\\documents\\year 2 sem 1\\asp.net\u0026c#\\individual project\\cavendishstudentportal\\models\\result.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E64A777D-EBDC-EB2B-ACC4-7EECD7CF9558}|CavendishACMISPortal.csproj|solutionrelative:models\\result.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E64A777D-EBDC-EB2B-ACC4-7EECD7CF9558}|CavendishACMISPortal.csproj|c:\\users\\epaju pius junior\\documents\\year 2 sem 1\\asp.net\u0026c#\\individual project\\cavendishstudentportal\\views\\admin\\editresult.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E64A777D-EBDC-EB2B-ACC4-7EECD7CF9558}|CavendishACMISPortal.csproj|solutionrelative:views\\admin\\editresult.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E64A777D-EBDC-EB2B-ACC4-7EECD7CF9558}|CavendishACMISPortal.csproj|c:\\users\\epaju pius junior\\documents\\year 2 sem 1\\asp.net\u0026c#\\individual project\\cavendishstudentportal\\views\\admin\\editmodule.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E64A777D-EBDC-EB2B-ACC4-7EECD7CF9558}|CavendishACMISPortal.csproj|solutionrelative:views\\admin\\editmodule.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E64A777D-EBDC-EB2B-ACC4-7EECD7CF9558}|CavendishACMISPortal.csproj|c:\\users\\epaju pius junior\\documents\\year 2 sem 1\\asp.net\u0026c#\\individual project\\cavendishstudentportal\\views\\admin\\enterresult.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E64A777D-EBDC-EB2B-ACC4-7EECD7CF9558}|CavendishACMISPortal.csproj|solutionrelative:views\\admin\\enterresult.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E64A777D-EBDC-EB2B-ACC4-7EECD7CF9558}|CavendishACMISPortal.csproj|c:\\users\\epaju pius junior\\documents\\year 2 sem 1\\asp.net\u0026c#\\individual project\\cavendishstudentportal\\views\\admin\\addmodule.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E64A777D-EBDC-EB2B-ACC4-7EECD7CF9558}|CavendishACMISPortal.csproj|solutionrelative:views\\admin\\addmodule.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E64A777D-EBDC-EB2B-ACC4-7EECD7CF9558}|CavendishACMISPortal.csproj|c:\\users\\epaju pius junior\\documents\\year 2 sem 1\\asp.net\u0026c#\\individual project\\cavendishstudentportal\\views\\admin\\modules.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E64A777D-EBDC-EB2B-ACC4-7EECD7CF9558}|CavendishACMISPortal.csproj|solutionrelative:views\\admin\\modules.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E64A777D-EBDC-EB2B-ACC4-7EECD7CF9558}|CavendishACMISPortal.csproj|c:\\users\\epaju pius junior\\documents\\year 2 sem 1\\asp.net\u0026c#\\individual project\\cavendishstudentportal\\views\\admin\\editcourse.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E64A777D-EBDC-EB2B-ACC4-7EECD7CF9558}|CavendishACMISPortal.csproj|solutionrelative:views\\admin\\editcourse.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E64A777D-EBDC-EB2B-ACC4-7EECD7CF9558}|CavendishACMISPortal.csproj|c:\\users\\epaju pius junior\\documents\\year 2 sem 1\\asp.net\u0026c#\\individual project\\cavendishstudentportal\\views\\admin\\addcourse.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E64A777D-EBDC-EB2B-ACC4-7EECD7CF9558}|CavendishACMISPortal.csproj|solutionrelative:views\\admin\\addcourse.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E64A777D-EBDC-EB2B-ACC4-7EECD7CF9558}|CavendishACMISPortal.csproj|c:\\users\\epaju pius junior\\documents\\year 2 sem 1\\asp.net\u0026c#\\individual project\\cavendishstudentportal\\views\\admin\\courses.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E64A777D-EBDC-EB2B-ACC4-7EECD7CF9558}|CavendishACMISPortal.csproj|solutionrelative:views\\admin\\courses.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E64A777D-EBDC-EB2B-ACC4-7EECD7CF9558}|CavendishACMISPortal.csproj|c:\\users\\epaju pius junior\\documents\\year 2 sem 1\\asp.net\u0026c#\\individual project\\cavendishstudentportal\\views\\admin\\editstudent.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E64A777D-EBDC-EB2B-ACC4-7EECD7CF9558}|CavendishACMISPortal.csproj|solutionrelative:views\\admin\\editstudent.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E64A777D-EBDC-EB2B-ACC4-7EECD7CF9558}|CavendishACMISPortal.csproj|c:\\users\\epaju pius junior\\documents\\year 2 sem 1\\asp.net\u0026c#\\individual project\\cavendishstudentportal\\views\\admin\\addstudent.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E64A777D-EBDC-EB2B-ACC4-7EECD7CF9558}|CavendishACMISPortal.csproj|solutionrelative:views\\admin\\addstudent.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E64A777D-EBDC-EB2B-ACC4-7EECD7CF9558}|CavendishACMISPortal.csproj|c:\\users\\epaju pius junior\\documents\\year 2 sem 1\\asp.net\u0026c#\\individual project\\cavendishstudentportal\\views\\admin\\students.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{E64A777D-EBDC-EB2B-ACC4-7EECD7CF9558}|CavendishACMISPortal.csproj|solutionrelative:views\\admin\\students.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E64A777D-EBDC-EB2B-ACC4-7EECD7CF9558}|CavendishACMISPortal.csproj|c:\\users\\epaju pius junior\\documents\\year 2 sem 1\\asp.net\u0026c#\\individual project\\cavendishstudentportal\\views\\admin\\editstudent.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E64A777D-EBDC-EB2B-ACC4-7EECD7CF9558}|CavendishACMISPortal.csproj|solutionrelative:views\\admin\\editstudent.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{E64A777D-EBDC-EB2B-ACC4-7EECD7CF9558}|CavendishACMISPortal.csproj|c:\\users\\epaju pius junior\\documents\\year 2 sem 1\\asp.net\u0026c#\\individual project\\cavendishstudentportal\\views\\admin\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E64A777D-EBDC-EB2B-ACC4-7EECD7CF9558}|CavendishACMISPortal.csproj|solutionrelative:views\\admin\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E64A777D-EBDC-EB2B-ACC4-7EECD7CF9558}|CavendishACMISPortal.csproj|c:\\users\\epaju pius junior\\documents\\year 2 sem 1\\asp.net\u0026c#\\individual project\\cavendishstudentportal\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E64A777D-EBDC-EB2B-ACC4-7EECD7CF9558}|CavendishACMISPortal.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E64A777D-EBDC-EB2B-ACC4-7EECD7CF9558}|CavendishACMISPortal.csproj|c:\\users\\epaju pius junior\\documents\\year 2 sem 1\\asp.net\u0026c#\\individual project\\cavendishstudentportal\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E64A777D-EBDC-EB2B-ACC4-7EECD7CF9558}|CavendishACMISPortal.csproj|solutionrelative:views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E64A777D-EBDC-EB2B-ACC4-7EECD7CF9558}|CavendishACMISPortal.csproj|c:\\users\\epaju pius junior\\documents\\year 2 sem 1\\asp.net\u0026c#\\individual project\\cavendishstudentportal\\controllers\\lecturercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E64A777D-EBDC-EB2B-ACC4-7EECD7CF9558}|CavendishACMISPortal.csproj|solutionrelative:controllers\\lecturercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E64A777D-EBDC-EB2B-ACC4-7EECD7CF9558}|CavendishACMISPortal.csproj|c:\\users\\epaju pius junior\\documents\\year 2 sem 1\\asp.net\u0026c#\\individual project\\cavendishstudentportal\\views\\student\\biodata.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -37,10 +101,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{E64A777D-EBDC-EB2B-ACC4-7EECD7CF9558}|CavendishACMISPortal.csproj|c:\\users\\epaju pius junior\\documents\\year 2 sem 1\\asp.net\u0026c#\\individual project\\cavendishstudentportal\\views\\lecturer\\addresult.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{E64A777D-EBDC-EB2B-ACC4-7EECD7CF9558}|CavendishACMISPortal.csproj|solutionrelative:views\\lecturer\\addresult.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E64A777D-EBDC-EB2B-ACC4-7EECD7CF9558}|CavendishACMISPortal.csproj|c:\\users\\epaju pius junior\\documents\\year 2 sem 1\\asp.net\u0026c#\\individual project\\cavendishstudentportal\\views\\student\\results.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E64A777D-EBDC-EB2B-ACC4-7EECD7CF9558}|CavendishACMISPortal.csproj|solutionrelative:views\\student\\results.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E64A777D-EBDC-EB2B-ACC4-7EECD7CF9558}|CavendishACMISPortal.csproj|c:\\users\\epaju pius junior\\documents\\year 2 sem 1\\asp.net\u0026c#\\individual project\\cavendishstudentportal\\views\\lecturer\\mystudents.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -63,24 +123,12 @@
       "RelativeMoniker": "D:0:0:{E64A777D-EBDC-EB2B-ACC4-7EECD7CF9558}|CavendishACMISPortal.csproj|solutionrelative:views\\student\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E64A777D-EBDC-EB2B-ACC4-7EECD7CF9558}|CavendishACMISPortal.csproj|c:\\users\\epaju pius junior\\documents\\year 2 sem 1\\asp.net\u0026c#\\individual project\\cavendishstudentportal\\views\\admin\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E64A777D-EBDC-EB2B-ACC4-7EECD7CF9558}|CavendishACMISPortal.csproj|solutionrelative:views\\admin\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E64A777D-EBDC-EB2B-ACC4-7EECD7CF9558}|CavendishACMISPortal.csproj|c:\\users\\epaju pius junior\\documents\\year 2 sem 1\\asp.net\u0026c#\\individual project\\cavendishstudentportal\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E64A777D-EBDC-EB2B-ACC4-7EECD7CF9558}|CavendishACMISPortal.csproj|solutionrelative:controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E64A777D-EBDC-EB2B-ACC4-7EECD7CF9558}|CavendishACMISPortal.csproj|c:\\users\\epaju pius junior\\documents\\year 2 sem 1\\asp.net\u0026c#\\individual project\\cavendishstudentportal\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E64A777D-EBDC-EB2B-ACC4-7EECD7CF9558}|CavendishACMISPortal.csproj|solutionrelative:controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E64A777D-EBDC-EB2B-ACC4-7EECD7CF9558}|CavendishACMISPortal.csproj|c:\\users\\epaju pius junior\\documents\\year 2 sem 1\\asp.net\u0026c#\\individual project\\cavendishstudentportal\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E64A777D-EBDC-EB2B-ACC4-7EECD7CF9558}|CavendishACMISPortal.csproj|solutionrelative:controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E64A777D-EBDC-EB2B-ACC4-7EECD7CF9558}|CavendishACMISPortal.csproj|c:\\users\\epaju pius junior\\documents\\year 2 sem 1\\asp.net\u0026c#\\individual project\\cavendishstudentportal\\models\\result.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E64A777D-EBDC-EB2B-ACC4-7EECD7CF9558}|CavendishACMISPortal.csproj|solutionrelative:models\\result.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E64A777D-EBDC-EB2B-ACC4-7EECD7CF9558}|CavendishACMISPortal.csproj|c:\\users\\epaju pius junior\\documents\\year 2 sem 1\\asp.net\u0026c#\\individual project\\cavendishstudentportal\\models\\lecturermoduleassignment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -93,10 +141,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{E64A777D-EBDC-EB2B-ACC4-7EECD7CF9558}|CavendishACMISPortal.csproj|c:\\users\\epaju pius junior\\documents\\year 2 sem 1\\asp.net\u0026c#\\individual project\\cavendishstudentportal\\models\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E64A777D-EBDC-EB2B-ACC4-7EECD7CF9558}|CavendishACMISPortal.csproj|solutionrelative:models\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E64A777D-EBDC-EB2B-ACC4-7EECD7CF9558}|CavendishACMISPortal.csproj|c:\\users\\epaju pius junior\\documents\\year 2 sem 1\\asp.net\u0026c#\\individual project\\cavendishstudentportal\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E64A777D-EBDC-EB2B-ACC4-7EECD7CF9558}|CavendishACMISPortal.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E64A777D-EBDC-EB2B-ACC4-7EECD7CF9558}|CavendishACMISPortal.csproj|c:\\users\\epaju pius junior\\documents\\year 2 sem 1\\asp.net\u0026c#\\individual project\\cavendishstudentportal\\data\\dbseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -117,6 +161,14 @@
     {
       "AbsoluteMoniker": "D:0:0:{E64A777D-EBDC-EB2B-ACC4-7EECD7CF9558}|CavendishACMISPortal.csproj|c:\\users\\epaju pius junior\\documents\\year 2 sem 1\\asp.net\u0026c#\\individual project\\cavendishstudentportal\\migrations\\20260513094203_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E64A777D-EBDC-EB2B-ACC4-7EECD7CF9558}|CavendishACMISPortal.csproj|solutionrelative:migrations\\20260513094203_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E64A777D-EBDC-EB2B-ACC4-7EECD7CF9558}|CavendishACMISPortal.csproj|c:\\users\\epaju pius junior\\documents\\year 2 sem 1\\asp.net\u0026c#\\individual project\\cavendishstudentportal\\migrations\\20260515134125_newcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E64A777D-EBDC-EB2B-ACC4-7EECD7CF9558}|CavendishACMISPortal.csproj|solutionrelative:migrations\\20260515134125_newcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E64A777D-EBDC-EB2B-ACC4-7EECD7CF9558}|CavendishACMISPortal.csproj|c:\\users\\epaju pius junior\\documents\\year 2 sem 1\\asp.net\u0026c#\\individual project\\cavendishstudentportal\\migrations\\20260515133505_updateforthreetiers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E64A777D-EBDC-EB2B-ACC4-7EECD7CF9558}|CavendishACMISPortal.csproj|solutionrelative:migrations\\20260515133505_updateforthreetiers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -129,68 +181,50 @@
           "SelectedChildIndex": 5,
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "20260515134125_NewCreate.cs",
-              "DocumentMoniker": "C:\\Users\\EPAJU PIUS JUNIOR\\Documents\\YEAR 2 SEM 1\\ASP.NET\u0026C#\\Individual Project\\CavendishStudentPortal\\Migrations\\20260515134125_NewCreate.cs",
-              "RelativeDocumentMoniker": "Migrations\\20260515134125_NewCreate.cs",
-              "ToolTip": "C:\\Users\\EPAJU PIUS JUNIOR\\Documents\\YEAR 2 SEM 1\\ASP.NET\u0026C#\\Individual Project\\CavendishStudentPortal\\Migrations\\20260515134125_NewCreate.cs",
-              "RelativeToolTip": "Migrations\\20260515134125_NewCreate.cs",
+              "Title": "Lecturers.cshtml",
+              "DocumentMoniker": "C:\\Users\\EPAJU PIUS JUNIOR\\Documents\\YEAR 2 SEM 1\\ASP.NET\u0026C#\\Individual Project\\CavendishStudentPortal\\Views\\Admin\\Lecturers.cshtml",
+              "RelativeDocumentMoniker": "Views\\Admin\\Lecturers.cshtml",
+              "ToolTip": "C:\\Users\\EPAJU PIUS JUNIOR\\Documents\\YEAR 2 SEM 1\\ASP.NET\u0026C#\\Individual Project\\CavendishStudentPortal\\Views\\Admin\\Lecturers.cshtml",
+              "RelativeToolTip": "Views\\Admin\\Lecturers.cshtml",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAAACUAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-16T12:29:57.3Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "20260516120027_UpdateResultWithCATs.cs",
+              "DocumentMoniker": "C:\\Users\\EPAJU PIUS JUNIOR\\Documents\\YEAR 2 SEM 1\\ASP.NET\u0026C#\\Individual Project\\CavendishStudentPortal\\Migrations\\20260516120027_UpdateResultWithCATs.cs",
+              "RelativeDocumentMoniker": "Migrations\\20260516120027_UpdateResultWithCATs.cs",
+              "ToolTip": "C:\\Users\\EPAJU PIUS JUNIOR\\Documents\\YEAR 2 SEM 1\\ASP.NET\u0026C#\\Individual Project\\CavendishStudentPortal\\Migrations\\20260516120027_UpdateResultWithCATs.cs",
+              "RelativeToolTip": "Migrations\\20260516120027_UpdateResultWithCATs.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-15T13:41:26.024Z",
+              "WhenOpened": "2026-05-16T12:00:28.851Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "C:\\Users\\EPAJU PIUS JUNIOR\\Documents\\YEAR 2 SEM 1\\ASP.NET\u0026C#\\Individual Project\\CavendishStudentPortal\\Views\\Account\\Login.cshtml",
-              "RelativeDocumentMoniker": "Views\\Account\\Login.cshtml",
-              "ToolTip": "C:\\Users\\EPAJU PIUS JUNIOR\\Documents\\YEAR 2 SEM 1\\ASP.NET\u0026C#\\Individual Project\\CavendishStudentPortal\\Views\\Account\\Login.cshtml",
-              "RelativeToolTip": "Views\\Account\\Login.cshtml",
-              "ViewState": "AgIAAGwBAAAAAAAAAAAYwIEBAAAAAAAAAAAAAA==",
+              "DocumentIndex": 8,
+              "Title": "EditResult.cshtml",
+              "DocumentMoniker": "C:\\Users\\EPAJU PIUS JUNIOR\\Documents\\YEAR 2 SEM 1\\ASP.NET\u0026C#\\Individual Project\\CavendishStudentPortal\\Views\\Admin\\EditResult.cshtml",
+              "RelativeDocumentMoniker": "Views\\Admin\\EditResult.cshtml",
+              "ToolTip": "C:\\Users\\EPAJU PIUS JUNIOR\\Documents\\YEAR 2 SEM 1\\ASP.NET\u0026C#\\Individual Project\\CavendishStudentPortal\\Views\\Admin\\EditResult.cshtml",
+              "RelativeToolTip": "Views\\Admin\\EditResult.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-15T13:39:14.431Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "20260515133505_UpdateForThreeTiers.cs",
-              "DocumentMoniker": "C:\\Users\\EPAJU PIUS JUNIOR\\Documents\\YEAR 2 SEM 1\\ASP.NET\u0026C#\\Individual Project\\CavendishStudentPortal\\Migrations\\20260515133505_UpdateForThreeTiers.cs",
-              "RelativeDocumentMoniker": "Migrations\\20260515133505_UpdateForThreeTiers.cs",
-              "ToolTip": "C:\\Users\\EPAJU PIUS JUNIOR\\Documents\\YEAR 2 SEM 1\\ASP.NET\u0026C#\\Individual Project\\CavendishStudentPortal\\Migrations\\20260515133505_UpdateForThreeTiers.cs",
-              "RelativeToolTip": "Migrations\\20260515133505_UpdateForThreeTiers.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-15T13:35:06.487Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Students.cshtml",
-              "DocumentMoniker": "C:\\Users\\EPAJU PIUS JUNIOR\\Documents\\YEAR 2 SEM 1\\ASP.NET\u0026C#\\Individual Project\\CavendishStudentPortal\\Views\\Admin\\Students.cshtml",
-              "RelativeDocumentMoniker": "Views\\Admin\\Students.cshtml",
-              "ToolTip": "C:\\Users\\EPAJU PIUS JUNIOR\\Documents\\YEAR 2 SEM 1\\ASP.NET\u0026C#\\Individual Project\\CavendishStudentPortal\\Views\\Admin\\Students.cshtml",
-              "RelativeToolTip": "Views\\Admin\\Students.cshtml",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAAACwAAAA/AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-15T13:29:50.037Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "EditStudent.cshtml",
-              "DocumentMoniker": "C:\\Users\\EPAJU PIUS JUNIOR\\Documents\\YEAR 2 SEM 1\\ASP.NET\u0026C#\\Individual Project\\CavendishStudentPortal\\Views\\Admin\\EditStudent.cshtml",
-              "RelativeDocumentMoniker": "Views\\Admin\\EditStudent.cshtml",
-              "ToolTip": "C:\\Users\\EPAJU PIUS JUNIOR\\Documents\\YEAR 2 SEM 1\\ASP.NET\u0026C#\\Individual Project\\CavendishStudentPortal\\Views\\Admin\\EditStudent.cshtml",
-              "RelativeToolTip": "Views\\Admin\\EditStudent.cshtml",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAACEAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-15T13:29:08.844Z",
+              "WhenOpened": "2026-05-16T11:18:00.354Z",
               "EditorCaption": ""
             },
             {
@@ -201,14 +235,271 @@
               "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
               "ToolTip": "C:\\Users\\EPAJU PIUS JUNIOR\\Documents\\YEAR 2 SEM 1\\ASP.NET\u0026C#\\Individual Project\\CavendishStudentPortal\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABAAAAAAAAAAA==",
+              "ViewState": "AgIAAIABAAAAAAAAAAAAAIkBAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-05-14T07:55:08.534Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AssignModules.cshtml",
+              "DocumentMoniker": "C:\\Users\\EPAJU PIUS JUNIOR\\Documents\\YEAR 2 SEM 1\\ASP.NET\u0026C#\\Individual Project\\CavendishStudentPortal\\Views\\Admin\\AssignModules.cshtml",
+              "RelativeDocumentMoniker": "Views\\Admin\\AssignModules.cshtml",
+              "ToolTip": "C:\\Users\\EPAJU PIUS JUNIOR\\Documents\\YEAR 2 SEM 1\\ASP.NET\u0026C#\\Individual Project\\CavendishStudentPortal\\Views\\Admin\\AssignModules.cshtml",
+              "RelativeToolTip": "Views\\Admin\\AssignModules.cshtml",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAcwBQAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-16T12:31:25.672Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Results.cshtml",
+              "DocumentMoniker": "C:\\Users\\EPAJU PIUS JUNIOR\\Documents\\YEAR 2 SEM 1\\ASP.NET\u0026C#\\Individual Project\\CavendishStudentPortal\\Views\\Admin\\Results.cshtml",
+              "RelativeDocumentMoniker": "Views\\Admin\\Results.cshtml",
+              "ToolTip": "C:\\Users\\EPAJU PIUS JUNIOR\\Documents\\YEAR 2 SEM 1\\ASP.NET\u0026C#\\Individual Project\\CavendishStudentPortal\\Views\\Admin\\Results.cshtml",
+              "RelativeToolTip": "Views\\Admin\\Results.cshtml",
+              "ViewState": "AgIAABkAAAAAAAAAAAAcwDsAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-16T11:00:18.763Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "EditModule.cshtml",
+              "DocumentMoniker": "C:\\Users\\EPAJU PIUS JUNIOR\\Documents\\YEAR 2 SEM 1\\ASP.NET\u0026C#\\Individual Project\\CavendishStudentPortal\\Views\\Admin\\EditModule.cshtml",
+              "RelativeDocumentMoniker": "Views\\Admin\\EditModule.cshtml",
+              "ToolTip": "C:\\Users\\EPAJU PIUS JUNIOR\\Documents\\YEAR 2 SEM 1\\ASP.NET\u0026C#\\Individual Project\\CavendishStudentPortal\\Views\\Admin\\EditModule.cshtml",
+              "RelativeToolTip": "Views\\Admin\\EditModule.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-16T10:58:22.382Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 7,
+              "Title": "Result.cs",
+              "DocumentMoniker": "C:\\Users\\EPAJU PIUS JUNIOR\\Documents\\YEAR 2 SEM 1\\ASP.NET\u0026C#\\Individual Project\\CavendishStudentPortal\\Models\\Result.cs",
+              "RelativeDocumentMoniker": "Models\\Result.cs",
+              "ToolTip": "C:\\Users\\EPAJU PIUS JUNIOR\\Documents\\YEAR 2 SEM 1\\ASP.NET\u0026C#\\Individual Project\\CavendishStudentPortal\\Models\\Result.cs",
+              "RelativeToolTip": "Models\\Result.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-15T12:59:42.725Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "C:\\Users\\EPAJU PIUS JUNIOR\\Documents\\YEAR 2 SEM 1\\ASP.NET\u0026C#\\Individual Project\\CavendishStudentPortal\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AdminController.cs",
+              "ToolTip": "C:\\Users\\EPAJU PIUS JUNIOR\\Documents\\YEAR 2 SEM 1\\ASP.NET\u0026C#\\Individual Project\\CavendishStudentPortal\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "Controllers\\AdminController.cs",
+              "ViewState": "AgIAAGoAAAAAAAAAAAAgwM0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-13T09:49:00.268Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "EnterResult.cshtml",
+              "DocumentMoniker": "C:\\Users\\EPAJU PIUS JUNIOR\\Documents\\YEAR 2 SEM 1\\ASP.NET\u0026C#\\Individual Project\\CavendishStudentPortal\\Views\\Admin\\EnterResult.cshtml",
+              "RelativeDocumentMoniker": "Views\\Admin\\EnterResult.cshtml",
+              "ToolTip": "C:\\Users\\EPAJU PIUS JUNIOR\\Documents\\YEAR 2 SEM 1\\ASP.NET\u0026C#\\Individual Project\\CavendishStudentPortal\\Views\\Admin\\EnterResult.cshtml",
+              "RelativeToolTip": "Views\\Admin\\EnterResult.cshtml",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAYwDMAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-16T11:01:11.369Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Results.cshtml",
+              "DocumentMoniker": "C:\\Users\\EPAJU PIUS JUNIOR\\Documents\\YEAR 2 SEM 1\\ASP.NET\u0026C#\\Individual Project\\CavendishStudentPortal\\Views\\Student\\Results.cshtml",
+              "RelativeDocumentMoniker": "Views\\Student\\Results.cshtml",
+              "ToolTip": "C:\\Users\\EPAJU PIUS JUNIOR\\Documents\\YEAR 2 SEM 1\\ASP.NET\u0026C#\\Individual Project\\CavendishStudentPortal\\Views\\Student\\Results.cshtml",
+              "RelativeToolTip": "Views\\Student\\Results.cshtml",
+              "ViewState": "AgIAABgAAAAAAAAAAAAowCMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-15T13:14:14.93Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "AddModule.cshtml",
+              "DocumentMoniker": "C:\\Users\\EPAJU PIUS JUNIOR\\Documents\\YEAR 2 SEM 1\\ASP.NET\u0026C#\\Individual Project\\CavendishStudentPortal\\Views\\Admin\\AddModule.cshtml",
+              "RelativeDocumentMoniker": "Views\\Admin\\AddModule.cshtml",
+              "ToolTip": "C:\\Users\\EPAJU PIUS JUNIOR\\Documents\\YEAR 2 SEM 1\\ASP.NET\u0026C#\\Individual Project\\CavendishStudentPortal\\Views\\Admin\\AddModule.cshtml",
+              "RelativeToolTip": "Views\\Admin\\AddModule.cshtml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAYwCEAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-16T10:57:54.618Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Modules.cshtml",
+              "DocumentMoniker": "C:\\Users\\EPAJU PIUS JUNIOR\\Documents\\YEAR 2 SEM 1\\ASP.NET\u0026C#\\Individual Project\\CavendishStudentPortal\\Views\\Admin\\Modules.cshtml",
+              "RelativeDocumentMoniker": "Views\\Admin\\Modules.cshtml",
+              "ToolTip": "C:\\Users\\EPAJU PIUS JUNIOR\\Documents\\YEAR 2 SEM 1\\ASP.NET\u0026C#\\Individual Project\\CavendishStudentPortal\\Views\\Admin\\Modules.cshtml",
+              "RelativeToolTip": "Views\\Admin\\Modules.cshtml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAYwCcAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-16T10:57:37.543Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "EditCourse.cshtml",
+              "DocumentMoniker": "C:\\Users\\EPAJU PIUS JUNIOR\\Documents\\YEAR 2 SEM 1\\ASP.NET\u0026C#\\Individual Project\\CavendishStudentPortal\\Views\\Admin\\EditCourse.cshtml",
+              "RelativeDocumentMoniker": "Views\\Admin\\EditCourse.cshtml",
+              "ToolTip": "C:\\Users\\EPAJU PIUS JUNIOR\\Documents\\YEAR 2 SEM 1\\ASP.NET\u0026C#\\Individual Project\\CavendishStudentPortal\\Views\\Admin\\EditCourse.cshtml",
+              "RelativeToolTip": "Views\\Admin\\EditCourse.cshtml",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAYwBYAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-16T10:57:17.361Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "AddCourse.cshtml",
+              "DocumentMoniker": "C:\\Users\\EPAJU PIUS JUNIOR\\Documents\\YEAR 2 SEM 1\\ASP.NET\u0026C#\\Individual Project\\CavendishStudentPortal\\Views\\Admin\\AddCourse.cshtml",
+              "RelativeDocumentMoniker": "Views\\Admin\\AddCourse.cshtml",
+              "ToolTip": "C:\\Users\\EPAJU PIUS JUNIOR\\Documents\\YEAR 2 SEM 1\\ASP.NET\u0026C#\\Individual Project\\CavendishStudentPortal\\Views\\Admin\\AddCourse.cshtml",
+              "RelativeToolTip": "Views\\Admin\\AddCourse.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-16T10:56:20.203Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Courses.cshtml",
+              "DocumentMoniker": "C:\\Users\\EPAJU PIUS JUNIOR\\Documents\\YEAR 2 SEM 1\\ASP.NET\u0026C#\\Individual Project\\CavendishStudentPortal\\Views\\Admin\\Courses.cshtml",
+              "RelativeDocumentMoniker": "Views\\Admin\\Courses.cshtml",
+              "ToolTip": "C:\\Users\\EPAJU PIUS JUNIOR\\Documents\\YEAR 2 SEM 1\\ASP.NET\u0026C#\\Individual Project\\CavendishStudentPortal\\Views\\Admin\\Courses.cshtml",
+              "RelativeToolTip": "Views\\Admin\\Courses.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-16T10:55:50.719Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "AddStudent.cshtml",
+              "DocumentMoniker": "C:\\Users\\EPAJU PIUS JUNIOR\\Documents\\YEAR 2 SEM 1\\ASP.NET\u0026C#\\Individual Project\\CavendishStudentPortal\\Views\\Admin\\AddStudent.cshtml",
+              "RelativeDocumentMoniker": "Views\\Admin\\AddStudent.cshtml",
+              "ToolTip": "C:\\Users\\EPAJU PIUS JUNIOR\\Documents\\YEAR 2 SEM 1\\ASP.NET\u0026C#\\Individual Project\\CavendishStudentPortal\\Views\\Admin\\AddStudent.cshtml",
+              "RelativeToolTip": "Views\\Admin\\AddStudent.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-16T10:53:18.992Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Students.cshtml",
+              "DocumentMoniker": "C:\\Users\\EPAJU PIUS JUNIOR\\Documents\\YEAR 2 SEM 1\\ASP.NET\u0026C#\\Individual Project\\CavendishStudentPortal\\Views\\Admin\\Students.cshtml",
+              "RelativeDocumentMoniker": "Views\\Admin\\Students.cshtml",
+              "ToolTip": "C:\\Users\\EPAJU PIUS JUNIOR\\Documents\\YEAR 2 SEM 1\\ASP.NET\u0026C#\\Individual Project\\CavendishStudentPortal\\Views\\Admin\\Students.cshtml",
+              "RelativeToolTip": "Views\\Admin\\Students.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC8AAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-15T13:29:50.037Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "EditStudent.cshtml",
+              "DocumentMoniker": "C:\\Users\\EPAJU PIUS JUNIOR\\Documents\\YEAR 2 SEM 1\\ASP.NET\u0026C#\\Individual Project\\CavendishStudentPortal\\Views\\Admin\\EditStudent.cshtml",
+              "RelativeDocumentMoniker": "Views\\Admin\\EditStudent.cshtml",
+              "ToolTip": "C:\\Users\\EPAJU PIUS JUNIOR\\Documents\\YEAR 2 SEM 1\\ASP.NET\u0026C#\\Individual Project\\CavendishStudentPortal\\Views\\Admin\\EditStudent.cshtml",
+              "RelativeToolTip": "Views\\Admin\\EditStudent.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-15T13:29:08.844Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\EPAJU PIUS JUNIOR\\Documents\\YEAR 2 SEM 1\\ASP.NET\u0026C#\\Individual Project\\CavendishStudentPortal\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Models\\User.cs",
+              "ToolTip": "C:\\Users\\EPAJU PIUS JUNIOR\\Documents\\YEAR 2 SEM 1\\ASP.NET\u0026C#\\Individual Project\\CavendishStudentPortal\\Models\\User.cs",
+              "RelativeToolTip": "Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-15T12:56:05.532Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Dashboard.cshtml",
+              "DocumentMoniker": "C:\\Users\\EPAJU PIUS JUNIOR\\Documents\\YEAR 2 SEM 1\\ASP.NET\u0026C#\\Individual Project\\CavendishStudentPortal\\Views\\Admin\\Dashboard.cshtml",
+              "RelativeDocumentMoniker": "Views\\Admin\\Dashboard.cshtml",
+              "ToolTip": "C:\\Users\\EPAJU PIUS JUNIOR\\Documents\\YEAR 2 SEM 1\\ASP.NET\u0026C#\\Individual Project\\CavendishStudentPortal\\Views\\Admin\\Dashboard.cshtml",
+              "RelativeToolTip": "Views\\Admin\\Dashboard.cshtml",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAYwBkAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-14T08:48:36.448Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "20260515133505_UpdateForThreeTiers.cs",
+              "DocumentMoniker": "C:\\Users\\EPAJU PIUS JUNIOR\\Documents\\YEAR 2 SEM 1\\ASP.NET\u0026C#\\Individual Project\\CavendishStudentPortal\\Migrations\\20260515133505_UpdateForThreeTiers.cs",
+              "RelativeDocumentMoniker": "Migrations\\20260515133505_UpdateForThreeTiers.cs",
+              "ToolTip": "C:\\Users\\EPAJU PIUS JUNIOR\\Documents\\YEAR 2 SEM 1\\ASP.NET\u0026C#\\Individual Project\\CavendishStudentPortal\\Migrations\\20260515133505_UpdateForThreeTiers.cs",
+              "RelativeToolTip": "Migrations\\20260515133505_UpdateForThreeTiers.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-15T13:35:06.487Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\EPAJU PIUS JUNIOR\\Documents\\YEAR 2 SEM 1\\ASP.NET\u0026C#\\Individual Project\\CavendishStudentPortal\\Views\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "Views\\Account\\Login.cshtml",
+              "ToolTip": "C:\\Users\\EPAJU PIUS JUNIOR\\Documents\\YEAR 2 SEM 1\\ASP.NET\u0026C#\\Individual Project\\CavendishStudentPortal\\Views\\Account\\Login.cshtml",
+              "RelativeToolTip": "Views\\Account\\Login.cshtml",
+              "ViewState": "AgIAAGwBAAAAAAAAAAAYwIEBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-15T13:39:14.431Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "20260515134125_NewCreate.cs",
+              "DocumentMoniker": "C:\\Users\\EPAJU PIUS JUNIOR\\Documents\\YEAR 2 SEM 1\\ASP.NET\u0026C#\\Individual Project\\CavendishStudentPortal\\Migrations\\20260515134125_NewCreate.cs",
+              "RelativeDocumentMoniker": "Migrations\\20260515134125_NewCreate.cs",
+              "ToolTip": "C:\\Users\\EPAJU PIUS JUNIOR\\Documents\\YEAR 2 SEM 1\\ASP.NET\u0026C#\\Individual Project\\CavendishStudentPortal\\Migrations\\20260515134125_NewCreate.cs",
+              "RelativeToolTip": "Migrations\\20260515134125_NewCreate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-15T13:41:26.024Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
               "Title": "BioData.cshtml",
               "DocumentMoniker": "C:\\Users\\EPAJU PIUS JUNIOR\\Documents\\YEAR 2 SEM 1\\ASP.NET\u0026C#\\Individual Project\\CavendishStudentPortal\\Views\\Student\\BioData.cshtml",
               "RelativeDocumentMoniker": "Views\\Student\\BioData.cshtml",
@@ -216,12 +507,11 @@
               "RelativeToolTip": "Views\\Student\\BioData.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAmwAoAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-15T13:15:34.784Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-15T13:15:34.784Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 24,
               "Title": "AddResult.cshtml",
               "DocumentMoniker": "C:\\Users\\EPAJU PIUS JUNIOR\\Documents\\YEAR 2 SEM 1\\ASP.NET\u0026C#\\Individual Project\\CavendishStudentPortal\\Views\\Lecturer\\AddResult.cshtml",
               "RelativeDocumentMoniker": "Views\\Lecturer\\AddResult.cshtml",
@@ -229,25 +519,11 @@
               "RelativeToolTip": "Views\\Lecturer\\AddResult.cshtml",
               "ViewState": "AgIAABAAAAAAAAAAAAAmwCMAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-15T13:15:07.396Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-15T13:15:07.396Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Results.cshtml",
-              "DocumentMoniker": "C:\\Users\\EPAJU PIUS JUNIOR\\Documents\\YEAR 2 SEM 1\\ASP.NET\u0026C#\\Individual Project\\CavendishStudentPortal\\Views\\Student\\Results.cshtml",
-              "RelativeDocumentMoniker": "Views\\Student\\Results.cshtml",
-              "ToolTip": "C:\\Users\\EPAJU PIUS JUNIOR\\Documents\\YEAR 2 SEM 1\\ASP.NET\u0026C#\\Individual Project\\CavendishStudentPortal\\Views\\Student\\Results.cshtml",
-              "RelativeToolTip": "Views\\Student\\Results.cshtml",
-              "ViewState": "AgIAABcAAAAAAAAAAAAmwCoAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-15T13:14:14.93Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 25,
               "Title": "MyStudents.cshtml",
               "DocumentMoniker": "C:\\Users\\EPAJU PIUS JUNIOR\\Documents\\YEAR 2 SEM 1\\ASP.NET\u0026C#\\Individual Project\\CavendishStudentPortal\\Views\\Lecturer\\MyStudents.cshtml",
               "RelativeDocumentMoniker": "Views\\Lecturer\\MyStudents.cshtml",
@@ -255,12 +531,11 @@
               "RelativeToolTip": "Views\\Lecturer\\MyStudents.cshtml",
               "ViewState": "AgIAAAwAAAAAAAAAAAAmwB8AAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-15T13:13:19.549Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-15T13:13:19.549Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 22,
               "Title": "LecturerController.cs",
               "DocumentMoniker": "C:\\Users\\EPAJU PIUS JUNIOR\\Documents\\YEAR 2 SEM 1\\ASP.NET\u0026C#\\Individual Project\\CavendishStudentPortal\\Controllers\\LecturerController.cs",
               "RelativeDocumentMoniker": "Controllers\\LecturerController.cs",
@@ -268,12 +543,11 @@
               "RelativeToolTip": "Controllers\\LecturerController.cs",
               "ViewState": "AgIAABEAAAAAAAAAAAAgwB8AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-15T13:02:07.938Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-15T13:02:07.938Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 26,
               "Title": "MyModules.cshtml",
               "DocumentMoniker": "C:\\Users\\EPAJU PIUS JUNIOR\\Documents\\YEAR 2 SEM 1\\ASP.NET\u0026C#\\Individual Project\\CavendishStudentPortal\\Views\\Lecturer\\MyModules.cshtml",
               "RelativeDocumentMoniker": "Views\\Lecturer\\MyModules.cshtml",
@@ -281,12 +555,11 @@
               "RelativeToolTip": "Views\\Lecturer\\MyModules.cshtml",
               "ViewState": "AgIAAAQAAAAAAAAAAAAmwBcAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-15T13:12:34.61Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-15T13:12:34.61Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 27,
               "Title": "Dashboard.cshtml",
               "DocumentMoniker": "C:\\Users\\EPAJU PIUS JUNIOR\\Documents\\YEAR 2 SEM 1\\ASP.NET\u0026C#\\Individual Project\\CavendishStudentPortal\\Views\\Lecturer\\Dashboard.cshtml",
               "RelativeDocumentMoniker": "Views\\Lecturer\\Dashboard.cshtml",
@@ -294,12 +567,11 @@
               "RelativeToolTip": "Views\\Lecturer\\Dashboard.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-15T13:11:18.542Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-15T13:11:18.542Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 28,
               "Title": "CgpaCalculator.cs",
               "DocumentMoniker": "C:\\Users\\EPAJU PIUS JUNIOR\\Documents\\YEAR 2 SEM 1\\ASP.NET\u0026C#\\Individual Project\\CavendishStudentPortal\\Services\\CgpaCalculator.cs",
               "RelativeDocumentMoniker": "Services\\CgpaCalculator.cs",
@@ -307,12 +579,11 @@
               "RelativeToolTip": "Services\\CgpaCalculator.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-15T13:09:46.21Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-15T13:09:46.21Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 29,
               "Title": "Dashboard.cshtml",
               "DocumentMoniker": "C:\\Users\\EPAJU PIUS JUNIOR\\Documents\\YEAR 2 SEM 1\\ASP.NET\u0026C#\\Individual Project\\CavendishStudentPortal\\Views\\Student\\Dashboard.cshtml",
               "RelativeDocumentMoniker": "Views\\Student\\Dashboard.cshtml",
@@ -320,25 +591,11 @@
               "RelativeToolTip": "Views\\Student\\Dashboard.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAQwBIAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-14T08:51:19.746Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-14T08:51:19.746Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Dashboard.cshtml",
-              "DocumentMoniker": "C:\\Users\\EPAJU PIUS JUNIOR\\Documents\\YEAR 2 SEM 1\\ASP.NET\u0026C#\\Individual Project\\CavendishStudentPortal\\Views\\Admin\\Dashboard.cshtml",
-              "RelativeDocumentMoniker": "Views\\Admin\\Dashboard.cshtml",
-              "ToolTip": "C:\\Users\\EPAJU PIUS JUNIOR\\Documents\\YEAR 2 SEM 1\\ASP.NET\u0026C#\\Individual Project\\CavendishStudentPortal\\Views\\Admin\\Dashboard.cshtml",
-              "RelativeToolTip": "Views\\Admin\\Dashboard.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-14T08:48:36.448Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 30,
               "Title": "StudentController.cs",
               "DocumentMoniker": "C:\\Users\\EPAJU PIUS JUNIOR\\Documents\\YEAR 2 SEM 1\\ASP.NET\u0026C#\\Individual Project\\CavendishStudentPortal\\Controllers\\StudentController.cs",
               "RelativeDocumentMoniker": "Controllers\\StudentController.cs",
@@ -346,25 +603,11 @@
               "RelativeToolTip": "Controllers\\StudentController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-15T13:02:54.752Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-15T13:02:54.752Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "AdminController.cs",
-              "DocumentMoniker": "C:\\Users\\EPAJU PIUS JUNIOR\\Documents\\YEAR 2 SEM 1\\ASP.NET\u0026C#\\Individual Project\\CavendishStudentPortal\\Controllers\\AdminController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AdminController.cs",
-              "ToolTip": "C:\\Users\\EPAJU PIUS JUNIOR\\Documents\\YEAR 2 SEM 1\\ASP.NET\u0026C#\\Individual Project\\CavendishStudentPortal\\Controllers\\AdminController.cs",
-              "RelativeToolTip": "Controllers\\AdminController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-13T09:49:00.268Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 31,
               "Title": "AccountController.cs",
               "DocumentMoniker": "C:\\Users\\EPAJU PIUS JUNIOR\\Documents\\YEAR 2 SEM 1\\ASP.NET\u0026C#\\Individual Project\\CavendishStudentPortal\\Controllers\\AccountController.cs",
               "RelativeDocumentMoniker": "Controllers\\AccountController.cs",
@@ -372,25 +615,11 @@
               "RelativeToolTip": "Controllers\\AccountController.cs",
               "ViewState": "AgIAABUAAAAAAAAAAAAmwCgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-13T09:47:30.911Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-13T09:47:30.911Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "Result.cs",
-              "DocumentMoniker": "C:\\Users\\EPAJU PIUS JUNIOR\\Documents\\YEAR 2 SEM 1\\ASP.NET\u0026C#\\Individual Project\\CavendishStudentPortal\\Models\\Result.cs",
-              "RelativeDocumentMoniker": "Models\\Result.cs",
-              "ToolTip": "C:\\Users\\EPAJU PIUS JUNIOR\\Documents\\YEAR 2 SEM 1\\ASP.NET\u0026C#\\Individual Project\\CavendishStudentPortal\\Models\\Result.cs",
-              "RelativeToolTip": "Models\\Result.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-15T12:59:42.725Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 32,
               "Title": "LecturerModuleAssignment.cs",
               "DocumentMoniker": "C:\\Users\\EPAJU PIUS JUNIOR\\Documents\\YEAR 2 SEM 1\\ASP.NET\u0026C#\\Individual Project\\CavendishStudentPortal\\Models\\LecturerModuleAssignment.cs",
               "RelativeDocumentMoniker": "Models\\LecturerModuleAssignment.cs",
@@ -398,12 +627,11 @@
               "RelativeToolTip": "Models\\LecturerModuleAssignment.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-15T12:58:52.085Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-15T12:58:52.085Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 33,
               "Title": "Module.cs",
               "DocumentMoniker": "C:\\Users\\EPAJU PIUS JUNIOR\\Documents\\YEAR 2 SEM 1\\ASP.NET\u0026C#\\Individual Project\\CavendishStudentPortal\\Models\\Module.cs",
               "RelativeDocumentMoniker": "Models\\Module.cs",
@@ -411,12 +639,11 @@
               "RelativeToolTip": "Models\\Module.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-15T12:57:10.351Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-15T12:57:10.351Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 34,
               "Title": "Course.cs",
               "DocumentMoniker": "C:\\Users\\EPAJU PIUS JUNIOR\\Documents\\YEAR 2 SEM 1\\ASP.NET\u0026C#\\Individual Project\\CavendishStudentPortal\\Models\\Course.cs",
               "RelativeDocumentMoniker": "Models\\Course.cs",
@@ -424,25 +651,11 @@
               "RelativeToolTip": "Models\\Course.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-15T12:56:30.604Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-15T12:56:30.604Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\EPAJU PIUS JUNIOR\\Documents\\YEAR 2 SEM 1\\ASP.NET\u0026C#\\Individual Project\\CavendishStudentPortal\\Models\\User.cs",
-              "RelativeDocumentMoniker": "Models\\User.cs",
-              "ToolTip": "C:\\Users\\EPAJU PIUS JUNIOR\\Documents\\YEAR 2 SEM 1\\ASP.NET\u0026C#\\Individual Project\\CavendishStudentPortal\\Models\\User.cs",
-              "RelativeToolTip": "Models\\User.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAowBAAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-15T12:56:05.532Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 35,
               "Title": "DbSeeder.cs",
               "DocumentMoniker": "C:\\Users\\EPAJU PIUS JUNIOR\\Documents\\YEAR 2 SEM 1\\ASP.NET\u0026C#\\Individual Project\\CavendishStudentPortal\\Data\\DbSeeder.cs",
               "RelativeDocumentMoniker": "Data\\DbSeeder.cs",
@@ -450,12 +663,11 @@
               "RelativeToolTip": "Data\\DbSeeder.cs",
               "ViewState": "AgIAAAcAAAAAAAAAAAAuwBYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-15T12:55:23Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-15T12:55:23Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 36,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "C:\\Users\\EPAJU PIUS JUNIOR\\Documents\\YEAR 2 SEM 1\\ASP.NET\u0026C#\\Individual Project\\CavendishStudentPortal\\Data\\AppDbContext.cs",
               "RelativeDocumentMoniker": "Data\\AppDbContext.cs",
@@ -463,12 +675,11 @@
               "RelativeToolTip": "Data\\AppDbContext.cs",
               "ViewState": "AgIAAAEAAAAAAAAAAAAmwBQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-15T12:53:58.81Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-15T12:53:58.81Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 38,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\EPAJU PIUS JUNIOR\\Documents\\YEAR 2 SEM 1\\ASP.NET\u0026C#\\Individual Project\\CavendishStudentPortal\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -476,20 +687,11 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAA8AAAAAAAAAAAAmwCIAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-15T12:52:23.791Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+              "WhenOpened": "2026-05-15T12:52:23.791Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 37,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\EPAJU PIUS JUNIOR\\Documents\\YEAR 2 SEM 1\\ASP.NET\u0026C#\\Individual Project\\CavendishStudentPortal\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -497,12 +699,11 @@
               "RelativeToolTip": "appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-05-13T09:47:12.03Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-13T09:47:12.03Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 39,
               "Title": "20260513094203_InitialCreate.cs",
               "DocumentMoniker": "C:\\Users\\EPAJU PIUS JUNIOR\\Documents\\YEAR 2 SEM 1\\ASP.NET\u0026C#\\Individual Project\\CavendishStudentPortal\\Migrations\\20260513094203_InitialCreate.cs",
               "RelativeDocumentMoniker": "Migrations\\20260513094203_InitialCreate.cs",

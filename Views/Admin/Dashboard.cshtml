@@ -2,17 +2,25 @@
     ViewData["Title"] = "Admin Dashboard";
 }
 <div class="max-w-7xl mx-auto">
-    <h1 class="text-4xl font-semibold mb-2">Admin Dashboard</h1>
-    <p class="text-gray-500">Welcome back, System Administrator</p>
+    <h1 class="text-4xl font-semibold text-gray-900 dark:text-white">Admin Dashboard</h1>
+    <p class="text-gray-500 dark:text-gray-400">System Overview</p>
 
     <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mt-10">
-        <div class="glass rounded-3xl p-6">
+        <div class="glass rounded-3xl p-8">
             <p class="text-sm text-gray-500">Total Students</p>
             <p class="text-5xl font-semibold mt-3">@ViewBag.TotalStudents</p>
         </div>
-        <div class="glass rounded-3xl p-6">
+        <div class="glass rounded-3xl p-8">
+            <p class="text-sm text-gray-500">Total Lecturers</p>
+            <p class="text-5xl font-semibold mt-3">@ViewBag.TotalLecturers</p>
+        </div>
+        <div class="glass rounded-3xl p-8">
             <p class="text-sm text-gray-500">Total Courses</p>
             <p class="text-5xl font-semibold mt-3">@ViewBag.TotalCourses</p>
+        </div>
+        <div class="glass rounded-3xl p-8">
+            <p class="text-sm text-gray-500">Total Modules</p>
+            <p class="text-5xl font-semibold mt-3">@ViewBag.TotalModules</p>
         </div>
     </div>
 </div>

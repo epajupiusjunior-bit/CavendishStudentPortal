@@ -1,0 +1,34 @@
+﻿@{
+    ViewData["Title"] = "Edit Result";
+    var result = Model as CavendishACMISPortal.Models.Result;
+}
+<div class="max-w-3xl mx-auto">
+    <h2 class="text-3xl font-semibold mb-8">Edit Result</h2>
+    <div class="glass rounded-3xl p-10">
+        <form asp-action="EditResult" method="post">
+            <input type="hidden" name="Id" value="@result?.Id" />
+
+            <div class="grid grid-cols-3 gap-6">
+                <div>
+                    <label class="block text-sm font-medium mb-2">CAT 1 (20%)</label>
+                    <input name="CAT1" value="@result?.CAT1" type="number" step="0.1" min="0" max="20"
+                           class="w-full px-5 py-4 rounded-2xl border focus:border-[#4E93CC]" required />
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-2">CAT 2 (20%)</label>
+                    <input name="CAT2" value="@result?.CAT2" type="number" step="0.1" min="0" max="20"
+                           class="w-full px-5 py-4 rounded-2xl border focus:border-[#4E93CC]" required />
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-2">Final Exam (60%)</label>
+                    <input name="FinalExam" value="@result?.FinalExam" type="number" step="0.1" min="0" max="60"
+                           class="w-full px-5 py-4 rounded-2xl border focus:border-[#4E93CC]" required />
+                </div>
+            </div>
+
+            <button type="submit" class="mt-12 w-full bg-green-600 text-white py-5 rounded-3xl font-semibold text-lg hover:bg-green-700">
+                Update Result
+            </button>
+        </form>
+    </div>
+</div>

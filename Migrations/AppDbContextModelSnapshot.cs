@@ -89,15 +89,17 @@ namespace CavendishACMISPortal.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("Grade")
-                        .IsRequired()
+                    b.Property<decimal>("CAT1")
+                        .HasColumnType("TEXT");
+
+                    b.Property<decimal>("CAT2")
+                        .HasColumnType("TEXT");
+
+                    b.Property<decimal>("FinalExam")
                         .HasColumnType("TEXT");
 
                     b.Property<int>("ModuleId")
                         .HasColumnType("INTEGER");
-
-                    b.Property<decimal>("Score")
-                        .HasColumnType("TEXT");
 
                     b.Property<int>("UserId")
                         .HasColumnType("INTEGER");

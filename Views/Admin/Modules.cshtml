@@ -1,24 +1,40 @@
 ﻿@{
-    ViewData["Title"] = "Manage Modules";
+    ViewData["Title"] = "Modules";
     var modules = Model as List<CavendishACMISPortal.Models.Module>;
 }
-<div class="max-w-6xl mx-auto">
-    <h2 class="text-3xl font-semibold mb-6">All Modules</h2>
-    <table class="w-full glass rounded-3xl overflow-hidden">
-        <thead class="bg-[#121e38] text-white">
-            <tr><th class="px-8 py-4 text-left">Module Code</th><th class="px-8 py-4 text-left">Module Name</th><th class="px-8 py-4 text-left">Credits</th><th class="px-8 py-4 text-left">Course</th><th>Actions</th></tr>
-        </thead>
-        <tbody>
-            @foreach (var m in modules ?? new List<CavendishACMISPortal.Models.Module>())
-            {
-                <tr class="border-t">
-                    <td class="px-8 py-4">@m.ModuleCode</td>
-                    <td class="px-8 py-4">@m.ModuleName</td>
-                    <td class="px-8 py-4">@m.Credits</td>
-                    <td class="px-8 py-4">@m.Course?.CourseName</td>
-                    <td class="px-8 py-4"><span class="text-[#4E93CC] hover:underline cursor-pointer">Edit</span></td>
+<div class="max-w-7xl mx-auto">
+    <div class="flex justify-between items-center mb-8">
+        <h2 class="text-3xl font-semibold">All Modules</h2>
+        <a asp-action="AddModule" class="bg-green-600 text-white px-8 py-4 rounded-3xl hover:bg-green-700">+ Add New Module</a>
+    </div>
+
+    <div class="glass rounded-3xl overflow-hidden">
+        <table class="w-full">
+            <thead class="bg-[#0f172a] text-white">
+                <tr>
+                    <th class="px-8 py-4 text-left">Module Code</th>
+                    <th class="px-8 py-4 text-left">Module Name</th>
+                    <th class="px-8 py-4 text-left">Credits</th>
+                    <th class="px-8 py-4 text-left">Course</th>
+                    <th class="px-8 py-4 text-left">Actions</th>
                 </tr>
-            }
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+                @foreach (var m in modules ?? new List<CavendishACMISPortal.Models.Module>())
+                {
+                    <tr class="border-t hover:bg-gray-50 dark:hover:bg-slate-800">
+                        <td class="px-8 py-4 font-medium">@m.ModuleCode</td>
+                        <td class="px-8 py-4">@m.ModuleName</td>
+                        <td class="px-8 py-4">@m.Credits</td>
+                        <td class="px-8 py-4">@m.Course?.CourseName</td>
+                        <td class="px-8 py-4">
+                            <a asp-action="EditModule" asp-route-id="@m.Id" class="text-blue-600 hover:underline mr-4">Edit</a>
+                            <a asp-action="DeleteModule" asp-route-id="@m.Id"
+                               onclick="return confirm('Delete this module?')" class="text-red-600 hover:underline">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
 </div>

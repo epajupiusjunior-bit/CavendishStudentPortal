@@ -1,0 +1,43 @@
+﻿@{
+    ViewData["Title"] = "My Results & CGPA";
+    var results = ViewBag.Results as List<CavendishACMISPortal.Models.Result>;
+    var cgpa = CavendishACMISPortal.Services.CgpaCalculator.CalculateCGPA(results ?? new List<CavendishACMISPortal.Models.Result>());
+}
+
+<div class="max-w-7xl mx-auto">
+    <div class="flex justify-between items-end mb-10">
+        <div>
+            <h1 class="text-4xl font-semibold text-gray-900 dark:text-white">My Results & CGPA</h1>
+            <p class="text-gray-500 dark:text-gray-400">Academic Performance Overview</p>
+        </div>
+        <div class="text-right">
+            <p class="text-sm text-gray-500">Current CGPA</p>
+            <p class="text-6xl font-bold text-indigo-600">@cgpa</p>
+            <p class="text-sm text-gray-500">/ 5.0</p>
+        </div>
+    </div>
+
+    <div class="glass rounded-3xl p-8">
+        <table class="w-full">
+            <thead class="bg-gray-100 dark:bg-slate-800">
+                <tr>
+                    <th class="px-8 py-4 text-left">Module</th>
+                    <th class="px-8 py-4 text-left">Score</th>
+                    <th class="px-8 py-4 text-left">Grade</th>
+                    <th class="px-8 py-4 text-left">Grade Point</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var r in results ?? new List<CavendishACMISPortal.Models.Result>())
+                {
+                    <tr class="border-t">
+                        <td class="px-8 py-4">@r.Module?.ModuleName</td>
+                        <td class="px-8 py-4">@r.Score</td>
+                        <td class="px-8 py-4 font-medium">@r.Grade</td>
+                        <td class="px-8 py-4">@CavendishACMISPortal.Services.CgpaCalculator.GetGradePoint(r.Grade)</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,24 +1,60 @@
 ﻿@{
-    ViewData["Title"] = "Manage Results";
+    ViewData["Title"] = "Results Management";
     var results = Model as List<CavendishACMISPortal.Models.Result>;
 }
-<div class="max-w-6xl mx-auto">
-    <h2 class="text-3xl font-semibold mb-6">All Student Results</h2>
-    <table class="w-full glass rounded-3xl overflow-hidden">
-        <thead class="bg-[#121e38] text-white">
-            <tr><th class="px-8 py-4 text-left">Student</th><th class="px-8 py-4 text-left">Module</th><th class="px-8 py-4 text-left">Score</th><th class="px-8 py-4 text-left">Grade</th><th>Actions</th></tr>
-        </thead>
-        <tbody>
-            @foreach (var r in results ?? new List<CavendishACMISPortal.Models.Result>())
-            {
-                <tr class="border-t">
-                    <td class="px-8 py-4">@r.User?.FullName</td>
-                    <td class="px-8 py-4">@r.Module?.ModuleName</td>
-                    <td class="px-8 py-4">@r.Score</td>
-                    <td class="px-8 py-4">@r.Grade</td>
-                    <td class="px-8 py-4"><span class="text-[#4E93CC] hover:underline cursor-pointer">Edit Score</span></td>
+
+<div class="max-w-7xl mx-auto">
+    <div class="flex justify-between items-center mb-8">
+        <div>
+            <h2 class="text-3xl font-semibold text-gray-900 dark:text-white">Results Management</h2>
+            <p class="text-gray-500 dark:text-gray-400">CAT1 (20%) • CAT2 (20%) • Final Exam (60%)</p>
+        </div>
+        <a asp-action="EnterResult"
+           class="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-3xl flex items-center gap-2 transition">
+            <i class="bi bi-plus-circle"></i> Enter New Result
+        </a>
+    </div>
+
+    <div class="glass rounded-3xl overflow-hidden">
+        <table class="w-full">
+            <thead class="bg-[#0f172a] text-white">
+                <tr>
+                    <th class="px-8 py-5 text-left">Student Name</th>
+                    <th class="px-8 py-5 text-left">Module</th>
+                    <th class="px-8 py-5 text-center">CAT 1 (20)</th>
+                    <th class="px-8 py-5 text-center">CAT 2 (20)</th>
+                    <th class="px-8 py-5 text-center">Final Exam (60)</th>
+                    <th class="px-8 py-5 text-center font-semibold">Total (100)</th>
+                    <th class="px-8 py-5 text-center">Grade</th>
+                    <th class="px-8 py-5 text-center">Actions</th>
                 </tr>
-            }
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+                @foreach (var r in results ?? new List<CavendishACMISPortal.Models.Result>())
+                {
+                    <tr class="border-t hover:bg-gray-50 dark:hover:bg-slate-800 transition">
+                        <td class="px-8 py-5">@r.User?.FullName</td>
+                        <td class="px-8 py-5">@r.Module?.ModuleName</td>
+                        <td class="px-8 py-5 text-center font-medium">@r.CAT1</td>
+                        <td class="px-8 py-5 text-center font-medium">@r.CAT2</td>
+                        <td class="px-8 py-5 text-center font-medium">@r.FinalExam</td>
+                        <td class="px-8 py-5 text-center font-bold text-lg">@r.Total</td>
+                        <td class="px-8 py-5 text-center">
+                            <span class="inline-block px-4 py-1 rounded-full text-sm font-semibold"
+                                  style="background: @(r.Grade == "A" || r.Grade == "B+" ? "#10b981" : "#eab308"); color: white;">
+                                @r.Grade
+                            </span>
+                        </td>
+                        <td class="px-8 py-5 text-center">
+                            <a asp-action="EditResult" asp-route-id="@r.Id"
+                               class="text-blue-600 hover:text-blue-700 font-medium mr-4">Edit</a>
+                            <a asp-action="DeleteResult" asp-route-id="@r.Id"
+                               onclick="return confirm('Delete this result record?')"
+                               class="text-red-600 hover:text-red-700 font-medium">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
 </div>
