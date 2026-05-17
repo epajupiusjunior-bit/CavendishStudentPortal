@@ -1,0 +1,41 @@
+﻿@{
+    ViewData["Title"] = "Grade Report";
+    var results = Model as List<CavendishACMISPortal.Models.Result>;
+    var moduleId = ViewBag.ModuleId ?? 0;
+}
+<div class="max-w-7xl mx-auto">
+    <h2 class="text-3xl font-semibold mb-8">Grade Report</h2>
+
+    <div class="glass rounded-3xl p-8">
+        <table class="w-full">
+            <thead class="bg-[#0f172a] text-white">
+                <tr>
+                    <th class="px-8 py-4 text-left">Student</th>
+                    <th class="px-8 py-4 text-center">CAT 1</th>
+                    <th class="px-8 py-4 text-center">CAT 2</th>
+                    <th class="px-8 py-4 text-center">Final Exam</th>
+                    <th class="px-8 py-4 text-center font-bold">Total</th>
+                    <th class="px-8 py-4 text-center">Grade</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var r in results ?? new List<CavendishACMISPortal.Models.Result>())
+                {
+                    <tr class="border-t">
+                        <td class="px-8 py-4">@r.User?.FullName</td>
+                        <td class="px-8 py-4 text-center">@r.CAT1</td>
+                        <td class="px-8 py-4 text-center">@r.CAT2</td>
+                        <td class="px-8 py-4 text-center">@r.FinalExam</td>
+                        <td class="px-8 py-4 text-center font-semibold">@r.Total</td>
+                        <td class="px-8 py-4 text-center">
+                            <span class="px-4 py-1 rounded-full text-sm font-medium"
+                                  style="background:@(r.Grade == "A" || r.Grade == "B+" ? "#10b981" : "#eab308"); color:white;">
+                                @r.Grade
+                            </span>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

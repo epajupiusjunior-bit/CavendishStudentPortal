@@ -1,19 +1,37 @@
 ﻿@{
     ViewData["Title"] = "Lecturer Dashboard";
     var lecturer = ViewBag.Lecturer as CavendishACMISPortal.Models.User;
+    var modules = ViewBag.AssignedModules as List<CavendishACMISPortal.Models.LecturerModuleAssignment>;
 }
 <div class="max-w-7xl mx-auto">
-    <h1 class="text-4xl font-semibold text-gray-900 dark:text-white">Welcome back, Dr. @lecturer?.FullName</h1>
-    <p class="text-gray-500 dark:text-gray-400 mt-1">Lecturer Portal • Fine Arts Department</p>
+    <h1 class="text-5xl font-semibold text-indigo-600 mt-3">Welcome back, Dr. @lecturer?.FullName</h1>
+    <p class="text-gray-500 dark:text-gray-400 mt-1">@lecturer?.Department Department</p>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
         <div class="glass rounded-3xl p-8">
-            <p class="text-sm text-gray-500">Assigned Modules</p>
-            <p class="text-5xl font-semibold text-indigo-600 mt-3">4</p>
+            <p class="text-sm text-gray-500 dark:text-gray-400">Assigned Modules</p>
+            <p class="text-5xl font-semibold text-indigo-600 mt-3">@modules?.Count </p>
         </div>
         <div class="glass rounded-3xl p-8">
-            <p class="text-sm text-gray-500">Students Taught</p>
+            <p class="text-sm text-gray-500 dark:text-gray-400">Students Taught</p>
             <p class="text-5xl font-semibold text-emerald-600 mt-3">87</p>
+        </div>
+    </div>
+
+    <div class="mt-12">
+        <h2 class="text-2xl font-semibold mb-6">My Modules</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            @foreach (var m in modules ?? new List<CavendishACMISPortal.Models.LecturerModuleAssignment>())
+            {
+                <div class="glass rounded-3xl p-8">
+                    <h4 class="font-semibold">@m.Module?.ModuleCode - @m.Module?.ModuleName</h4>
+                    <p class="text-sm text-gray-500">@m.Module?.Credits Credits</p>
+                    <a asp-action="MyStudents" asp-route-moduleId="@m.ModuleId"
+                       class="mt-6 inline-block bg-indigo-600 text-white px-6 py-3 rounded-2xl hover:bg-indigo-700">
+                        View Students & Enter Results →
+                    </a>
+                </div>
+            }
         </div>
     </div>
 </div>
