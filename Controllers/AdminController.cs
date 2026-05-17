@@ -22,16 +22,11 @@ namespace CavendishACMISPortal.Controllers
             ViewBag.TotalCourses = _context.Courses.Count();
             ViewBag.TotalModules = _context.Modules.Count();
 
-            // FIXED: Bring data to memory first before calculating Total
             ViewBag.BestStudents = _context.Results
                 .Include(r => r.User)
-                .Include(r => r.Module)
-                .ToList()                                   // ← Important: Client-side evaluation
+                .ToList()
                 .GroupBy(r => r.UserId)
-                .Select(g => new {
-                    Student = g.First().User,
-                    AvgScore = g.Average(r => (double)r.Total)
-                })
+                .Select(g => new { Student = g.First().User, AvgScore = g.Average(r => (double)r.Total) })
                 .OrderByDescending(s => s.AvgScore)
                 .Take(5)
                 .ToList();
@@ -116,12 +111,11 @@ namespace CavendishACMISPortal.Controllers
             }
             return RedirectToAction("Students");
         }
+
         // ==================== LECTURERS CRUD ====================
         public IActionResult Lecturers()
         {
-            var lecturers = _context.Users
-                .Where(u => u.Role == "Lecturer")
-                .ToList();
+            var lecturers = _context.Users.Where(u => u.Role == "Lecturer").ToList();
             return View(lecturers);
         }
 
@@ -167,20 +161,22 @@ namespace CavendishACMISPortal.Controllers
             }
             return RedirectToAction("Lecturers");
         }
-
         // ==================== ASSIGN MODULES TO LECTURER ====================
         public IActionResult AssignModules(int lecturerId)
         {
             var lecturer = _context.Users.Find(lecturerId);
+            if (lecturer == null) return RedirectToAction("Lecturers");
+
             var allModules = _context.Modules.Include(m => m.Course).ToList();
-            var assigned = _context.LecturerAssignments
+            var assignedIds = _context.LecturerAssignments
                 .Where(a => a.LecturerId == lecturerId)
                 .Select(a => a.ModuleId)
                 .ToList();
 
             ViewBag.Lecturer = lecturer;
             ViewBag.AllModules = allModules;
-            ViewBag.AssignedModuleIds = assigned;
+            ViewBag.AssignedModuleIds = assignedIds;
+
             return View();
         }
 
@@ -188,16 +184,16 @@ namespace CavendishACMISPortal.Controllers
         public IActionResult AssignModules(int lecturerId, int[] moduleIds)
         {
             // Remove old assignments
-            var oldAssignments = _context.LecturerAssignments.Where(a => a.LecturerId == lecturerId);
-            _context.LecturerAssignments.RemoveRange(oldAssignments);
+            var old = _context.LecturerAssignments.Where(a => a.LecturerId == lecturerId);
+            _context.LecturerAssignments.RemoveRange(old);
 
-            // Add new assignments
-            foreach (var moduleId in moduleIds)
+            // Add new ones
+            foreach (var mid in moduleIds)
             {
                 _context.LecturerAssignments.Add(new LecturerModuleAssignment
                 {
                     LecturerId = lecturerId,
-                    ModuleId = moduleId
+                    ModuleId = mid
                 });
             }
 
@@ -241,7 +237,11 @@ namespace CavendishACMISPortal.Controllers
         // ==================== MODULES CRUD ====================
         public IActionResult Modules() => View(_context.Modules.Include(m => m.Course).ToList());
 
-        public IActionResult AddModule() => View();
+        public IActionResult AddModule()
+        {
+            ViewBag.Courses = _context.Courses.ToList();
+            return View();
+        }
 
         [HttpPost]
         public IActionResult AddModule(Module model)
@@ -251,7 +251,11 @@ namespace CavendishACMISPortal.Controllers
             return RedirectToAction("Modules");
         }
 
-        public IActionResult EditModule(int id) => View(_context.Modules.Include(m => m.Course).FirstOrDefault(m => m.Id == id));
+        public IActionResult EditModule(int id)
+        {
+            ViewBag.Courses = _context.Courses.ToList();
+            return View(_context.Modules.Include(m => m.Course).FirstOrDefault(m => m.Id == id));
+        }
 
         [HttpPost]
         public IActionResult EditModule(Module model)
@@ -272,7 +276,7 @@ namespace CavendishACMISPortal.Controllers
             return RedirectToAction("Modules");
         }
 
-        // ==================== RESULTS CRUD (CAT1, CAT2, Exam) ====================
+        // ==================== RESULTS CRUD ====================
         public IActionResult Results()
         {
             var results = _context.Results
@@ -282,7 +286,12 @@ namespace CavendishACMISPortal.Controllers
             return View(results);
         }
 
-        public IActionResult EnterResult() => View(new Result());
+        public IActionResult EnterResult()
+        {
+            ViewBag.Students = _context.Users.Where(u => u.Role == "Student").ToList();
+            ViewBag.Modules = _context.Modules.ToList();
+            return View(new Result());
+        }
 
         [HttpPost]
         public IActionResult EnterResult(Result model)
@@ -294,11 +303,9 @@ namespace CavendishACMISPortal.Controllers
 
         public IActionResult EditResult(int id)
         {
-            var result = _context.Results
-                .Include(r => r.User)
-                .Include(r => r.Module)
-                .FirstOrDefault(r => r.Id == id);
-            return View(result);
+            ViewBag.Students = _context.Users.Where(u => u.Role == "Student").ToList();
+            ViewBag.Modules = _context.Modules.ToList();
+            return View(_context.Results.Find(id));
         }
 
         [HttpPost]

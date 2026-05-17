@@ -39,6 +39,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRkQ291cnNlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/EPAJU PIUS JUNIOR/Documents/YEAR 2 SEM 1/ASP.NET&C\#/Individual Project/CavendishStudentPortal/Views/Admin/AddLecturer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRkTGVjdHVyZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/EPAJU PIUS JUNIOR/Documents/YEAR 2 SEM 1/ASP.NET&C\#/Individual Project/CavendishStudentPortal/Views/Admin/AddModule.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRkTW9kdWxlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -61,6 +65,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/EPAJU PIUS JUNIOR/Documents/YEAR 2 SEM 1/ASP.NET&C\#/Individual Project/CavendishStudentPortal/Views/Admin/EditCourse.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdENvdXJzZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/EPAJU PIUS JUNIOR/Documents/YEAR 2 SEM 1/ASP.NET&C\#/Individual Project/CavendishStudentPortal/Views/Admin/EditLecturer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdExlY3R1cmVyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/EPAJU PIUS JUNIOR/Documents/YEAR 2 SEM 1/ASP.NET&C\#/Individual Project/CavendishStudentPortal/Views/Admin/EditModule.cshtml]

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CavendishACMISPortal")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4ad500c941c6aef93a0ed0d31a8db7db4ec2adf9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a37ba3cafb9e484bb76efeb4e8170381ecbecad4")]
 [assembly: System.Reflection.AssemblyProductAttribute("CavendishACMISPortal")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CavendishACMISPortal")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

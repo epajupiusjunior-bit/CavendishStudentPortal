@@ -2,27 +2,30 @@
     ViewData["Title"] = "Assign Modules";
     var lecturer = ViewBag.Lecturer as CavendishACMISPortal.Models.User;
     var modules = ViewBag.AllModules as List<CavendishACMISPortal.Models.Module>;
-    var assignedIds = ViewBag.AssignedModuleIds as List<int> ?? new List<int>();
+    var assigned = ViewBag.AssignedModuleIds as List<int> ?? new List<int>();
 }
 <div class="max-w-4xl mx-auto">
-    <h2 class="text-3xl font-semibold mb-2">Assign Modules to Dr. @lecturer?.FullName</h2>
-    <p class="text-gray-500 mb-8">Teacher ID: @lecturer?.Username</p>
+    <h2 class="text-3xl font-semibold mb-2">Assign Modules</h2>
+    <p class="text-gray-500 mb-8">To: <strong>Dr. @lecturer?.FullName</strong> (ID: @lecturer?.Username)</p>
 
     <form asp-action="AssignModules" method="post">
         <input type="hidden" name="lecturerId" value="@lecturer?.Id" />
+
         <div class="glass rounded-3xl p-8">
             @foreach (var m in modules ?? new List<CavendishACMISPortal.Models.Module>())
             {
-                <div class="flex items-center gap-4 py-4 border-b last:border-none">
+                bool isChecked = assigned.Contains(m.Id);
+                <div class="flex items-center gap-4 py-5 border-b last:border-none">
                     <input type="checkbox" name="moduleIds" value="@m.Id"
-                    @(assignedIds.Contains(m.Id) ? "checked" : "") class="w-5 h-5" />
-                    <div>
+                    @(isChecked ? "checked" : "") class="w-5 h-5 accent-blue-600" />
+                    <div class="flex-1">
                         <p class="font-medium">@m.ModuleCode - @m.ModuleName</p>
                         <p class="text-sm text-gray-500">@m.Course?.CourseName • @m.Credits Credits</p>
                     </div>
                 </div>
             }
-            <button type="submit" class="mt-8 w-full bg-green-600 text-white py-5 rounded-3xl font-semibold">
+
+            <button type="submit" class="mt-10 w-full bg-green-600 text-white py-5 rounded-3xl font-semibold hover:bg-green-700">
                 Save Module Assignments
             </button>
         </div>
