@@ -1,0 +1,42 @@
+﻿@{
+    ViewData["Title"] = "Bulk Import Results";
+    int moduleId = ViewBag.ModuleId ?? 0;
+    string moduleName = ViewBag.ModuleName ?? "Module";
+}
+
+<div class="max-w-3xl mx-auto">
+    <h2 class="text-3xl font-semibold mb-2">Bulk Import Results</h2>
+    <p class="text-gray-500 mb-8">Module: <strong>@moduleName</strong></p>
+
+    <div class="glass rounded-3xl p-10">
+        <form asp-action="BulkImport" method="post" enctype="multipart/form-data">
+            <input type="hidden" name="moduleId" value="@moduleId" />
+
+            <div class="mb-8">
+                <label class="block text-sm font-medium mb-3">Upload Excel File</label>
+                <input type="file" name="excelFile" accept=".xlsx,.xls"
+                       class="w-full px-5 py-4 rounded-2xl border focus:border-[#4E93CC]" required />
+            </div>
+
+            <div class="bg-blue-50 dark:bg-blue-950 border border-blue-200 dark:border-blue-800 rounded-2xl p-6 mb-8">
+                <h4 class="font-medium mb-3">Excel Format Required:</h4>
+                <ul class="text-sm space-y-1 text-gray-600 dark:text-gray-400">
+                    <li><strong>Column A:</strong> Student Number (e.g. 1800722717)</li>
+                    <li><strong>Column B:</strong> CAT 1 Score (0-20)</li>
+                    <li><strong>Column C:</strong> CAT 2 Score (0-20)</li>
+                    <li><strong>Column D:</strong> Final Exam Score (0-60)</li>
+                </ul>
+                <p class="text-xs mt-4 text-amber-600">First row should be headers. Data starts from row 2.</p>
+            </div>
+
+            <button type="submit" class="w-full bg-green-600 hover:bg-green-700 text-white py-5 rounded-3xl font-semibold transition">
+                Upload & Import Results
+            </button>
+        </form>
+    </div>
+
+    <div class="text-center mt-8">
+        <a asp-action="MyStudents" asp-route-moduleId="@moduleId"
+           class="text-gray-500 hover:text-gray-700">← Back to Students List</a>
+    </div>
+</div>

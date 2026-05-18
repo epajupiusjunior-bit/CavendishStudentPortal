@@ -2,18 +2,35 @@
     ViewData["Title"] = "My Modules";
     var modules = Model as List<CavendishACMISPortal.Models.Module>;
 }
+
 <div class="max-w-7xl mx-auto">
-    <h2 class="text-3xl font-semibold mb-8">My Assigned Modules</h2>
+    <h2 class="text-3xl font-semibold mb-8">My Modules</h2>
+
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         @foreach (var m in modules ?? new List<CavendishACMISPortal.Models.Module>())
         {
             <div class="glass rounded-3xl p-8">
-                <h4 class="font-semibold">@m.ModuleCode - @m.ModuleName</h4>
-                <p class="text-sm text-gray-500">@m.Credits Credits • @m.Course?.CourseName</p>
-                <a asp-action="MyStudents" asp-route-moduleId="@m.Id"
-                   class="mt-6 inline-block bg-indigo-600 text-white px-6 py-3 rounded-2xl hover:bg-indigo-700">
-                    View Students →
-                </a>
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h4 class="font-semibold text-lg">@m.ModuleCode - @m.ModuleName</h4>
+                        <p class="text-sm text-gray-500">@m.Credits Credits • @m.Course?.CourseName</p>
+                    </div>
+                </div>
+
+                <div class="mt-6 flex gap-3">
+                    <a asp-action="MyStudents" asp-route-moduleId="@m.Id"
+                       class="flex-1 bg-indigo-600 text-white py-4 rounded-2xl text-center hover:bg-indigo-700">
+                        View Students
+                    </a>
+                    <a asp-action="ModulePerformance" asp-route-moduleId="@m.Id"
+                       class="flex-1 bg-emerald-600 text-white py-4 rounded-2xl text-center hover:bg-emerald-700">
+                        Performance Report
+                    </a>
+                    <a asp-action="ExportModuleResults" asp-route-moduleId="@m.Id"
+                       class="flex-1 bg-amber-600 text-white py-4 rounded-2xl text-center hover:bg-amber-700">
+                        Export Excel
+                    </a>
+                </div>
             </div>
         }
     </div>

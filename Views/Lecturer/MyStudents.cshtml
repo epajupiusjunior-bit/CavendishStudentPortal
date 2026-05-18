@@ -1,28 +1,60 @@
 ﻿@{
     ViewData["Title"] = "My Students";
     var students = Model as List<CavendishACMISPortal.Models.User>;
+    var results = ViewBag.Results as List<CavendishACMISPortal.Models.Result>;
     int moduleId = ViewBag.ModuleId ?? 0;
 }
+
 <div class="max-w-7xl mx-auto">
-    <h2 class="text-3xl font-semibold mb-8">Students in this Module</h2>
+    <div class="flex justify-between items-center mb-8">
+        <h2 class="text-3xl font-semibold">Students in @ViewBag.ModuleName</h2>
+        <div class="flex gap-4">
+            <a asp-action="BulkImport" asp-route-moduleId="@moduleId" class="bg-amber-600 text-white px-6 py-3 rounded-2xl hover:bg-amber-700">
+                Bulk Import Results
+            </a>
+            <a asp-action="AddResult" asp-route-moduleId="@moduleId" class="bg-green-600 text-white px-6 py-3 rounded-2xl hover:bg-green-700">
+                Add Single Result
+            </a>
+        </div>
+    </div>
+
     <div class="glass rounded-3xl p-8">
         <table class="w-full">
             <thead class="bg-gray-100 dark:bg-slate-800">
                 <tr>
                     <th class="px-8 py-4 text-left">Student Name</th>
                     <th class="px-8 py-4 text-left">Student No</th>
-                    <th class="px-8 py-4 text-left">Actions</th>
+                    <th class="px-8 py-4 text-center">CAT 1</th>
+                    <th class="px-8 py-4 text-center">CAT 2</th>
+                    <th class="px-8 py-4 text-center">Final Exam</th>
+                    <th class="px-8 py-4 text-center">Total</th>
+                    <th class="px-8 py-4 text-center">Grade</th>
+                    <th class="px-8 py-4 text-center">Actions</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach (var s in students ?? new List<CavendishACMISPortal.Models.User>())
                 {
+                    var result = results?.FirstOrDefault(r => r.UserId == s.Id);
                     <tr class="border-t">
                         <td class="px-8 py-4">@s.FullName</td>
                         <td class="px-8 py-4">@s.Username</td>
-                        <td class="px-8 py-4">
-                            <a asp-action="AddResult" asp-route-moduleId="@moduleId"
-                               class="text-indigo-600 hover:underline">Enter Result</a>
+                        <td class="px-8 py-4 text-center">@result?.CAT1</td>
+                        <td class="px-8 py-4 text-center">@result?.CAT2</td>
+                        <td class="px-8 py-4 text-center">@result?.FinalExam</td>
+                        <td class="px-8 py-4 text-center font-semibold">@result?.Total</td>
+                        <td class="px-8 py-4 text-center">@result?.Grade</td>
+                        <td class="px-8 py-4 text-center">
+                            @if (result != null)
+                            {
+                                <a asp-action="EditResult" asp-route-id="@result.Id" class="text-blue-600 hover:underline mr-3">Edit</a>
+                                <a asp-action="DeleteResult" asp-route-id="@result.Id"
+                                   onclick="return confirm('Delete this result?')" class="text-red-600 hover:underline">Delete</a>
+                            }
+                            else
+                            {
+                                <a asp-action="AddResult" asp-route-moduleId="@moduleId" class="text-green-600 hover:underline">Add Result</a>
+                            }
                         </td>
                     </tr>
                 }

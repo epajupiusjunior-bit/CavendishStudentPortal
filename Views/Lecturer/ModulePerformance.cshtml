@@ -1,0 +1,80 @@
+﻿@{
+    ViewData["Title"] = "Module Performance";
+    var results = Model as List<CavendishACMISPortal.Models.Result>;
+    var module = ViewBag.Module as CavendishACMISPortal.Models.Module;
+}
+
+<div class="max-w-7xl mx-auto">
+    <div class="flex justify-between items-center mb-8">
+        <div>
+            <h2 class="text-3xl font-semibold">@module?.ModuleCode - @module?.ModuleName</h2>
+            <p class="text-gray-500">Performance Report</p>
+        </div>
+        <a asp-action="ExportModuleResults" asp-route-moduleId="@module?.Id"
+           class="bg-green-600 text-white px-6 py-3 rounded-2xl hover:bg-green-700">
+            📥 Export to Excel
+        </a>
+    </div>
+
+    <!-- Chart -->
+    <div class="glass rounded-3xl p-8 mb-10">
+        <canvas id="performanceChart" height="110"></canvas>
+    </div>
+
+    <!-- Results Table -->
+    <div class="glass rounded-3xl p-8">
+        <table class="w-full">
+            <thead class="bg-gray-100 dark:bg-slate-800">
+                <tr>
+                    <th class="px-8 py-4 text-left">Student Name</th>
+                    <th class="px-8 py-4 text-center">CAT 1</th>
+                    <th class="px-8 py-4 text-center">CAT 2</th>
+                    <th class="px-8 py-4 text-center">Final Exam</th>
+                    <th class="px-8 py-4 text-center font-bold">Total</th>
+                    <th class="px-8 py-4 text-center">Grade</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var r in results ?? new List<CavendishACMISPortal.Models.Result>())
+                {
+                    <tr class="border-t">
+                        <td class="px-8 py-4">@r.User?.FullName</td>
+                        <td class="px-8 py-4 text-center">@r.CAT1</td>
+                        <td class="px-8 py-4 text-center">@r.CAT2</td>
+                        <td class="px-8 py-4 text-center">@r.FinalExam</td>
+                        <td class="px-8 py-4 text-center font-semibold">@r.Total</td>
+                        <td class="px-8 py-4 text-center">
+                            <span class="px-5 py-1 rounded-full text-sm font-medium"
+                                  style="background:@(r.Grade == "A" || r.Grade == "B+" ? "#10b981" : "#eab308"); color:white;">
+                                @r.Grade
+                            </span>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    const labels = @Html.Raw(System.Text.Json.JsonSerializer.Serialize((results ?? new List<CavendishACMISPortal.Models.Result>()).Select(r => r.User?.FullName?.Split(' ')[0] ?? "Student").ToArray()));
+    const scores = @Html.Raw(System.Text.Json.JsonSerializer.Serialize((results ?? new List<CavendishACMISPortal.Models.Result>()).Select(r => (double)r.Total).ToArray()));
+
+    new Chart(document.getElementById('performanceChart'), {
+    type: 'bar',
+    data: {
+    labels: labels,
+    datasets: [{
+    label: 'Total Score',
+    data: scores,
+    backgroundColor: '#4E93CC',
+    borderWidth: 1
+    }]
+    },
+    options: {
+    responsive: true,
+    scales: { y: { beginAtZero: true, max: 100 } }
+    }
+    });
+</script>
