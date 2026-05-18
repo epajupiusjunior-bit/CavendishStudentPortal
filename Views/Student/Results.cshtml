@@ -7,13 +7,19 @@
 <div class="max-w-7xl mx-auto">
     <div class="flex justify-between items-end mb-10">
         <div>
-            <h1 class="text-4xl font-semibold text-gray-900 dark:text-white">My Results & CGPA</h1>
-            <p class="text-gray-500 dark:text-gray-400">Academic Performance Overview</p>
+            <h1 class="text-4xl font-semibold">My Academic Results</h1>
         </div>
         <div class="text-right">
-            <p class="text-sm text-gray-500">Current CGPA</p>
-            <p class="text-6xl font-bold text-indigo-600">@cgpa</p>
-            <p class="text-sm text-gray-500">/ 5.0</p>
+            <p class="text-sm text-gray-500">Cumulative GPA</p>
+            <p class="text-6xl font-bold text-indigo-600">@cgpa <span class="text-2xl font-normal">/ 5.0</span></p>
+        </div>
+    </div>
+
+    <!-- Simple Chart -->
+    <div class="glass rounded-3xl p-8 mb-10">
+        <h3 class="font-semibold mb-4">Performance Trend</h3>
+        <div class="h-64 bg-gray-100 dark:bg-slate-800 rounded-2xl flex items-center justify-center text-gray-400">
+            [Grade Analytics Chart - Can be enhanced with Chart.js later]
         </div>
     </div>
 
@@ -22,9 +28,11 @@
             <thead class="bg-gray-100 dark:bg-slate-800">
                 <tr>
                     <th class="px-8 py-4 text-left">Module</th>
-                    <th class="px-8 py-4 text-left">Score</th>
-                    <th class="px-8 py-4 text-left">Grade</th>
-                    <th class="px-8 py-4 text-left">Grade Point</th>
+                    <th class="px-8 py-4 text-center">CAT 1</th>
+                    <th class="px-8 py-4 text-center">CAT 2</th>
+                    <th class="px-8 py-4 text-center">Final Exam</th>
+                    <th class="px-8 py-4 text-center font-bold">Total</th>
+                    <th class="px-8 py-4 text-center">Grade</th>
                 </tr>
             </thead>
             <tbody>
@@ -32,12 +40,25 @@
                 {
                     <tr class="border-t">
                         <td class="px-8 py-4">@r.Module?.ModuleName</td>
-                        <td class="px-8 py-4">@r.Total</td>
-                        <td class="px-8 py-4 font-medium">@r.Grade</td>
-                        <td class="px-8 py-4">@CavendishACMISPortal.Services.CgpaCalculator.GetGradePoint(r.Grade)</td>
+                        <td class="px-8 py-4 text-center">@r.CAT1</td>
+                        <td class="px-8 py-4 text-center">@r.CAT2</td>
+                        <td class="px-8 py-4 text-center">@r.FinalExam</td>
+                        <td class="px-8 py-4 text-center font-semibold">@r.Total</td>
+                        <td class="px-8 py-4 text-center">
+                            <span class="px-5 py-1 rounded-full text-sm font-medium"
+                                  style="background:@(r.Grade == "A" || r.Grade == "B+" ? "#10b981" : "#eab308"); color:white;">
+                                @r.Grade
+                            </span>
+                        </td>
                     </tr>
                 }
             </tbody>
         </table>
+    </div>
+
+    <div class="mt-8 text-center">
+        <a asp-action="DownloadTranscript" class="inline-flex items-center gap-2 bg-green-600 text-white px-8 py-4 rounded-3xl hover:bg-green-700">
+            <i class="bi bi-download"></i> Download Official Transcript (PDF/Excel)
+        </a>
     </div>
 </div>

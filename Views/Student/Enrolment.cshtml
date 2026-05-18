@@ -1,20 +1,107 @@
 ﻿@{
     ViewData["Title"] = "Enrolment";
-    var modules = ViewBag.Modules as List<CavendishACMISPortal.Models.Module>;
+    var student = ViewBag.Student as CavendishACMISPortal.Models.User;
+    var modules = ViewBag.AvailableModules as List<CavendishACMISPortal.Models.Module>;
+    var failedModules = ViewBag.FailedModules as List<CavendishACMISPortal.Models.Result>;
 }
-<div class="max-w-6xl mx-auto">
-    <h2 class="text-3xl font-semibold mb-6">Enrol / Register Modules</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        @foreach (var m in modules ?? new List<CavendishACMISPortal.Models.Module>())
-        {
-            <div class="glass rounded-3xl p-6">
-                <h4 class="font-semibold">@m.ModuleCode - @m.ModuleName</h4>
-                <p class="text-sm text-gray-500">@m.Credits Credits</p>
-                <form asp-action="RegisterModule" method="post" class="mt-4">
-                    <input type="hidden" name="moduleId" value="@m.Id" />
-                    <button type="submit" class="bg-green-600 text-white px-8 py-3 rounded-3xl">Register for this Module</button>
-                </form>
+
+<div class="max-w-7xl mx-auto">
+    <h1 class="text-4xl font-semibold mb-2">Enrolment Portal</h1>
+    <p class="text-gray-500">Welcome, @student?.FullName</p>
+
+    @if (TempData["Success"] != null)
+    {
+        <div class="bg-green-100 border border-green-400 text-green-700 px-6 py-4 rounded-2xl mb-8">
+            @TempData["Success"]
+        </div>
+    }
+
+    <!-- Tabs -->
+    <div class="flex border-b mb-8">
+        <button onclick="showTab(0)" class="tab-button active px-8 py-4 font-medium">Year & Semester</button>
+        <button onclick="showTab(1)" class="tab-button px-8 py-4 font-medium">Module Registration</button>
+        <button onclick="showTab(2)" class="tab-button px-8 py-4 font-medium">Retake Registration</button>
+    </div>
+
+    <!-- Tab 1: Year & Semester -->
+    <div id="tab0" class="tab-content">
+        <div class="glass rounded-3xl p-10 max-w-lg">
+            <form asp-action="RegisterSemester" method="post">
+                <div class="mb-6">
+                    <label class="block text-sm font-medium mb-2">Academic Year</label>
+                    <select name="academicYear" class="w-full px-5 py-4 rounded-2xl border" required>
+                        <option value="2025/2026">2025/2026</option>
+                        <option value="2026/2027">2026/2027</option>
+                    </select>
+                </div>
+                <div class="mb-8">
+                    <label class="block text-sm font-medium mb-2">Semester</label>
+                    <select name="semester" class="w-full px-5 py-4 rounded-2xl border" required>
+                        <option value="Semester I">Semester I</option>
+                        <option value="Semester II">Semester II</option>
+                    </select>
+                </div>
+                <button type="submit" class="w-full bg-green-600 text-white py-5 rounded-3xl font-semibold">Register Semester</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Tab 2: Module Registration -->
+    <div id="tab1" class="tab-content hidden">
+        <form asp-action="RegisterModules" method="post">
+            <div class="glass rounded-3xl p-8">
+                <h3 class="font-semibold mb-6">Available Modules</h3>
+                @foreach (var m in modules ?? new List<CavendishACMISPortal.Models.Module>())
+                {
+                    <div class="flex items-center gap-4 py-4 border-b last:border-none">
+                        <input type="checkbox" name="moduleIds" value="@m.Id" class="w-5 h-5" />
+                        <div>
+                            <p class="font-medium">@m.ModuleCode - @m.ModuleName</p>
+                            <p class="text-sm text-gray-500">@m.Credits Credits</p>
+                        </div>
+                    </div>
+                }
             </div>
+            <button type="submit" class="mt-8 w-full bg-green-600 text-white py-5 rounded-3xl font-semibold">Register Selected Modules</button>
+        </form>
+    </div>
+
+    <!-- Tab 3: Retake Registration -->
+    <div id="tab2" class="tab-content hidden">
+        @if (failedModules?.Any() == true)
+        {
+            <form asp-action="RegisterRetakes" method="post">
+                <div class="glass rounded-3xl p-8">
+                    <h3 class="font-semibold mb-6 text-red-600">Failed Modules - Retake</h3>
+                    @foreach (var f in failedModules)
+                    {
+                        <div class="flex items-center gap-4 py-4 border-b last:border-none">
+                            <input type="checkbox" name="moduleIds" value="@f.ModuleId" class="w-5 h-5" />
+                            <div>
+                                <p class="font-medium">@f.Module?.ModuleName</p>
+                                <p class="text-sm text-red-500">Previous Grade: @f.Grade</p>
+                            </div>
+                        </div>
+                    }
+                </div>
+                <button type="submit" class="mt-8 w-full bg-red-600 text-white py-5 rounded-3xl font-semibold">Register Retakes</button>
+            </form>
+        }
+        else
+        {
+            <p class="text-green-600 text-center py-12">No failed modules. You have no retakes pending.</p>
         }
     </div>
 </div>
+
+<script>
+    function showTab(n) {
+        document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+        document.getElementById('tab' + n).classList.remove('hidden');
+
+        document.querySelectorAll('.tab-button').forEach(el => el.classList.remove('active', 'border-b-2', 'border-green-600'));
+        document.querySelectorAll('.tab-button')[n].classList.add('active', 'border-b-2', 'border-green-600');
+    }
+    // Show first tab by default
+    showTab(0);
+</script>

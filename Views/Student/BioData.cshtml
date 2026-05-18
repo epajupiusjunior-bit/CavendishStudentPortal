@@ -1,17 +1,40 @@
 ﻿@{
     ViewData["Title"] = "Bio Data";
-    var user = ViewBag.User as CavendishACMISPortal.Models.User;
+    var student = ViewBag.Student as CavendishACMISPortal.Models.User;
 }
-<div class="max-w-4xl mx-auto">
+<div class="max-w-5xl mx-auto">
     <h2 class="text-3xl font-semibold mb-8">👤 My Bio Data</h2>
     <div class="glass rounded-3xl p-10">
-        <div class="grid grid-cols-2 gap-8">
-            <div><strong>Full Name:</strong> @user?.FullName</div>
-            <div><strong>Student No:</strong> @user?.Username</div>
-            <div><strong>Programme:</strong> @user?.Programme</div>
-            <div><strong>District:</strong> @user?.District</div>
-            <div><strong>Email:</strong> @user?.Email</div>
-            <div><strong>Phone:</strong> @user?.Phone</div>
-        </div>
+        <form asp-action="UpdateBioData" method="post">
+            <div class="grid grid-cols-2 gap-x-12 gap-y-8">
+                <div>
+                    <label class="block text-sm font-medium mb-2">Full Name</label>
+                    <input value="@student?.FullName" class="w-full px-6 py-4 rounded-2xl border bg-gray-50" readonly />
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-2">Student Number</label>
+                    <input value="@student?.Username" class="w-full px-6 py-4 rounded-2xl border bg-gray-50" readonly />
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-2">Programme</label>
+                    <input value="@student?.Programme" class="w-full px-6 py-4 rounded-2xl border bg-gray-50" readonly />
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-2">District</label>
+                    <input value="@student?.District" class="w-full px-6 py-4 rounded-2xl border bg-gray-50" readonly />
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-2">Phone Number</label>
+                    <input name="phone" value="@student?.Phone" class="w-full px-6 py-4 rounded-2xl border focus:border-[#4E93CC]" required />
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-2">Email Address</label>
+                    <input name="email" value="@student?.Email" type="email" class="w-full px-6 py-4 rounded-2xl border focus:border-[#4E93CC]" required />
+                </div>
+            </div>
+            <button type="submit" class="mt-10 bg-green-600 text-white px-12 py-4 rounded-3xl font-semibold hover:bg-green-700">
+                Save Changes
+            </button>
+        </form>
     </div>
 </div>
